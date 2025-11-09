@@ -1,0 +1,767 @@
+[gd_scene load_steps=45 format=4 uid="uid://crnvnuaxk5jrl"]
+
+[ext_resource type="Script" path="res://level.gd" id="1_rvhjd"]
+[ext_resource type="PackedScene" uid="uid://sbes3fxx23wc" path="res://Objects/player.tscn" id="2_kkudi"]
+[ext_resource type="Texture2D" uid="uid://4ckeqdxma7m0" path="res://Textures/Player/Clothed Sprite Sheet 2.png" id="3_icbhg"]
+[ext_resource type="PackedScene" uid="uid://pl2x1nqikijo" path="res://Objects/liftable.tscn" id="4_fkq3d"]
+[ext_resource type="Texture2D" uid="uid://78rrkdlkxrag" path="res://Textures/Kubo/standHighlight.png" id="5_c7jr1"]
+[ext_resource type="Texture2D" uid="uid://chpp8bxivh5pn" path="res://Textures/Kubo/roomHighlight.png" id="6_4abjb"]
+[ext_resource type="Texture2D" uid="uid://1rgarwlnlgbe" path="res://Textures/Kubo/burnRoof.png" id="7_ah8kk"]
+[ext_resource type="Texture2D" uid="uid://wuq674usl4cp" path="res://Textures/Kubo/roofHighlight.png" id="8_3iq7j"]
+[ext_resource type="PackedScene" uid="uid://co1l12uwcutm2" path="res://Objects/goal.tscn" id="9_ffbj4"]
+[ext_resource type="PackedScene" uid="uid://d1gds7u4hjhap" path="res://Objects/blockMap.tscn" id="10_dlrrg"]
+[ext_resource type="Script" path="res://camera.gd" id="11_0psev"]
+[ext_resource type="PackedScene" uid="uid://cekw1rbfi24j2" path="res://Objects/cameraBoundaries.tscn" id="12_nws32"]
+[ext_resource type="Texture2D" uid="uid://ni7gxo0pcqhc" path="res://Textures/Tutorials/lift.png" id="13_qkj6b"]
+[ext_resource type="Theme" uid="uid://dmm7qxbft8xa2" path="res://gameTheme.tres" id="14_d0e8i"]
+[ext_resource type="FontFile" uid="uid://o0xxxmhp70u" path="res://Levels/Vaticanus-G3yVG.ttf" id="15_rsfch"]
+[ext_resource type="Texture2D" uid="uid://m56eweko1tr4" path="res://Textures/Kubo/hut.png" id="16_guloy"]
+[ext_resource type="Texture2D" uid="uid://h7ocmu3x2als" path="res://Textures/Tutorials/build.png" id="17_30w5a"]
+[ext_resource type="Texture2D" uid="uid://myvw7108paer" path="res://Textures/Tutorials/actions.png" id="18_6oo36"]
+[ext_resource type="Texture2D" uid="uid://ddami5cr8f7su" path="res://Textures/Mountain.png" id="19_ta4d3"]
+[ext_resource type="Texture2D" uid="uid://dis6pkdby5j6w" path="res://Textures/Clouds.png" id="20_kqktm"]
+[ext_resource type="PackedScene" uid="uid://bhpq5sx6brid5" path="res://Objects/audioPlayer.tscn" id="21_wkm4s"]
+[ext_resource type="Texture2D" uid="uid://ctn4l3lwqvxum" path="res://Textures/Decor/Grasses and Bushes.png" id="22_a8syy"]
+[ext_resource type="Texture2D" uid="uid://b1hvu5jwia6rn" path="res://Textures/Decor/Bushes Spritesheet.png" id="23_vbm4a"]
+[ext_resource type="Texture2D" uid="uid://bkoye6mb4om2i" path="res://Textures/Decor/Trees.png" id="24_y5jop"]
+[ext_resource type="Texture2D" uid="uid://oys5hd5xf2cp" path="res://Textures/Decor/Signs.png" id="25_rbab2"]
+[ext_resource type="PackedScene" uid="uid://dfymj3ljy6eyh" path="res://Objects/torch.tscn" id="26_dcclv"]
+[ext_resource type="Script" path="res://Levels/cellularWater.gd" id="27_b1t1m"]
+[ext_resource type="PackedScene" uid="uid://p5hnrt2wqqic" path="res://Objects/dynamicWater.tscn" id="28_8n28y"]
+[ext_resource type="PackedScene" uid="uid://d1f4mtptoug7s" path="res://Objects/bucket.tscn" id="29_dvux8"]
+[ext_resource type="PhysicsMaterial" uid="uid://b7jkmtmvrye0q" path="res://liftable.tres" id="30_ngr0v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_najhu"]
+size = Vector2(28, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbwri"]
+size = Vector2(28, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3eis"]
+size = Vector2(28, 5)
+
+[sub_resource type="Animation" id="Animation_kjttt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/Welcome:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/Transition:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Goal/Sprite2D:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Goal/Darken:color")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.223529, 0.321569, 0.435294, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Camera2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(192, 160)]
+}
+
+[sub_resource type="Animation" id="Animation_xvlwb"]
+resource_name = "intro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/Transition:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.233333, 0.633333),
+"transitions": PackedFloat32Array(1, 1, 0.31864),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_imahd"]
+resource_name = "start"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/Welcome:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 4.6, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/Transition:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 1, 2.33333, 2.46667, 2.6, 2.73333, 4.6, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Camera2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5, 2.56667, 4.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(139, 219), Vector2(162, 219), Vector2(346, 202), Vector2(346, 286)]
+}
+
+[sub_resource type="Animation" id="Animation_74gor"]
+resource_name = "win"
+length = 1.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Goal/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 10]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Goal/Darken:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.223529, 0.321569, 0.435294, 0), Color(0, 0, 0, 0.635294)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k2573"]
+_data = {
+"RESET": SubResource("Animation_kjttt"),
+"intro": SubResource("Animation_xvlwb"),
+"start": SubResource("Animation_imahd"),
+"win": SubResource("Animation_74gor")
+}
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2p15q"]
+texture = ExtResource("22_a8syy")
+9:0/0 = 0
+1:1/0 = 0
+3:1/0 = 0
+5:1/0 = 0
+7:1/0 = 0
+9:1/0 = 0
+1:3/0 = 0
+3:3/0 = 0
+5:3/0 = 0
+9:3/0 = 0
+1:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+9:5/0 = 0
+1:7/0 = 0
+9:7/0 = 0
+10:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_baw5j"]
+texture = ExtResource("23_vbm4a")
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_463yc"]
+texture = ExtResource("24_y5jop")
+1:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_na77f"]
+texture = ExtResource("25_rbab2")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3fk6n"]
+sources/0 = SubResource("TileSetAtlasSource_2p15q")
+sources/1 = SubResource("TileSetAtlasSource_baw5j")
+sources/2 = SubResource("TileSetAtlasSource_463yc")
+sources/3 = SubResource("TileSetAtlasSource_na77f")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8pi4k"]
+size = Vector2(563.5, 124)
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_rvhjd")
+waterLevel = true
+
+[node name="player1" parent="." instance=ExtResource("2_kkudi")]
+position = Vector2(69, 200)
+collision_layer = 9
+
+[node name="Build" parent="player1" index="5"]
+collision_layer = 0
+
+[node name="player2" parent="." instance=ExtResource("2_kkudi")]
+position = Vector2(112, 202)
+collision_layer = 6
+collision_mask = 2
+lastDir = -1
+id = 2
+
+[node name="Sprite2D" parent="player2" index="1"]
+texture = ExtResource("3_icbhg")
+flip_h = true
+
+[node name="PickUp" parent="player2" index="4"]
+collision_mask = 2056
+
+[node name="Build" parent="player2" index="5"]
+collision_layer = 0
+
+[node name="Stand" parent="." instance=ExtResource("4_fkq3d")]
+visible = false
+position = Vector2(277, 104)
+freeze = true
+
+[node name="Sprite2D" parent="Stand" index="0"]
+position = Vector2(0, -21)
+frame = 1
+
+[node name="Highlight" parent="Stand" index="2"]
+position = Vector2(0, -20)
+texture = ExtResource("5_c7jr1")
+
+[node name="CollisionShape2D" parent="Stand" index="3"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_najhu")
+
+[node name="Top" parent="Stand" index="4"]
+position = Vector2(0, -6)
+
+[node name="Room" parent="." instance=ExtResource("4_fkq3d")]
+visible = false
+position = Vector2(322, 108)
+freeze = true
+id = 1
+
+[node name="Sprite2D" parent="Room" index="0"]
+position = Vector2(0, -21)
+frame = 2
+
+[node name="Highlight" parent="Room" index="2"]
+position = Vector2(0, -20)
+texture = ExtResource("6_4abjb")
+
+[node name="CollisionShape2D" parent="Room" index="3"]
+position = Vector2(0.5, -8)
+shape = SubResource("RectangleShape2D_fbwri")
+
+[node name="Top" parent="Room" index="4"]
+position = Vector2(0, -9)
+
+[node name="Roof" parent="." instance=ExtResource("4_fkq3d")]
+position = Vector2(182, 281)
+id = 2
+interval = 0.5
+
+[node name="Sprite2D" parent="Roof" index="0"]
+position = Vector2(0, -21)
+frame = 4
+
+[node name="Burn" parent="Roof" index="1"]
+visible = false
+position = Vector2(0, -20)
+texture = ExtResource("7_ah8kk")
+
+[node name="Highlight" parent="Roof" index="2"]
+position = Vector2(0, -20)
+texture = ExtResource("8_3iq7j")
+
+[node name="CollisionShape2D" parent="Roof" index="3"]
+position = Vector2(0.5, -3.5)
+shape = SubResource("RectangleShape2D_t3eis")
+
+[node name="Top" parent="Roof" index="4"]
+position = Vector2(0, -3)
+
+[node name="Goal" parent="." instance=ExtResource("9_ffbj4")]
+position = Vector2(561, 204)
+completion = 2
+
+[node name="Sprite2D" parent="Goal" index="1"]
+frame = 5
+
+[node name="Dirt" parent="." instance=ExtResource("10_dlrrg")]
+z_index = 100
+position = Vector2(-112, -24)
+tile_map_data = PackedByteArray("AAALAA4AAAAAAAAAAAALAA8AAAAAAAEAAAAOABMAAAABAAEAAAAPABMAAAADAAEAAAAQABMAAAABAAAAAAARABMAAAABAAAAAAASABMAAAABAAAAAAAMAA4AAAABAAAAAAAMAA8AAAABAAEAAAANAA4AAAABAAAAAAANAA8AAAABAAEAAAAOAA4AAAABAAAAAAAOAA8AAAABAAEAAAAOABAAAAABAAEAAAAOABEAAAABAAEAAAAOABIAAAABAAEAAAAOABQAAAABAAEAAAAPAA4AAAACAAAAAAAPAA8AAAACAAEAAAAPABAAAAACAAEAAAAPABEAAAACAAEAAAAPABIAAAACAAEAAAAPABQAAAABAAEAAAAQABQAAAABAAEAAAALABAAAAAAAAEAAAALABEAAAAAAAEAAAALABIAAAAAAAEAAAAMABAAAAABAAEAAAAMABEAAAABAAEAAAAMABIAAAABAAEAAAAMABMAAAABAAEAAAAMABQAAAABAAEAAAAMABUAAAABAAEAAAANABAAAAABAAEAAAANABEAAAABAAEAAAANABIAAAABAAEAAAANABMAAAABAAEAAAANABQAAAABAAEAAAANABUAAAABAAEAAAALABMAAAAAAAEAAAALABQAAAAAAAEAAAALABUAAAAAAAEAAAALABYAAAAAAAEAAAALABcAAAAAAAEAAAALABgAAAAAAAEAAAALABkAAAAAAAEAAAALABoAAAAAAAEAAAAhABMAAAAAAAAAAAAiABMAAAABAAAAAAAjABMAAAABAAAAAAAkABMAAAABAAAAAAAlABMAAAABAAAAAAAmABMAAAAEAAEAAAAmABAAAAAAAAEAAAAmABEAAAAAAAEAAAAmABIAAAAAAAEAAAAmAA8AAAAAAAAAAAAnAA8AAAABAAAAAAAoAA8AAAABAAAAAAApAA8AAAABAAAAAAAqAA8AAAABAAAAAAArAA8AAAABAAAAAAACAAYAAAABAAEAAAACAAcAAAABAAEAAAACAAgAAAABAAEAAAACAAkAAAABAAEAAAACAAoAAAABAAEAAAACAAsAAAABAAEAAAACAAwAAAABAAEAAAACAA0AAAABAAEAAAACAA4AAAABAAEAAAACAA8AAAABAAEAAAACABAAAAABAAEAAAACABEAAAABAAEAAAACABIAAAABAAEAAAACABMAAAABAAEAAAACABQAAAABAAEAAAACABUAAAABAAEAAAACABYAAAABAAEAAAAhABQAAAAAAAEAAAAhABUAAAAAAAEAAAAhABYAAAAAAAEAAAAhABcAAAAAAAEAAAAhABgAAAAAAAEAAAAhABkAAAAAAAEAAAAhABoAAAAAAAEAAAAhABsAAAAAAAEAAAAhABwAAAAAAAEAAAAVABMAAAABAAAAAAAWABMAAAACAAAAAAAWABQAAAACAAEAAAAWABUAAAACAAEAAAAWABYAAAACAAEAAAAWABcAAAACAAEAAAAWABgAAAACAAEAAAAWABkAAAACAAEAAAAWABoAAAACAAEAAAAWABsAAAACAAEAAAAUABMAAAABAAAAAAATABMAAAABAAAAAAA=")
+
+[node name="Stone" parent="." instance=ExtResource("10_dlrrg")]
+z_index = 100
+position = Vector2(-112, -24)
+tile_map_data = PackedByteArray("AAALAA8AAQACAAEAAAALAA4AAQACAAAAAAAKAA4AAQABAAAAAAAJAA4AAQAAAAAAAAAJAA8AAQAAAAEAAAAJABAAAQAAAAEAAAAJABEAAQAAAAEAAAAJABIAAQAAAAEAAAAJABMAAQAAAAEAAAAJABQAAQAAAAEAAAALABAAAQACAAEAAAALABEAAQACAAEAAAALABIAAQACAAEAAAALABMAAQACAAEAAAALABQAAQACAAEAAAAKAA8AAQABAAEAAAAKABAAAQABAAEAAAAKABEAAQABAAEAAAAKABIAAQABAAEAAAAKABMAAQABAAEAAAAKABQAAQABAAEAAAA=")
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player1", "player2", "goal")]
+z_index = 200
+position = Vector2(192, 160)
+script = ExtResource("11_0psev")
+player1 = NodePath("../player1")
+player2 = NodePath("../player2")
+camOffset = Vector2(0, 36)
+threshold = 3.0
+goal = NodePath("../Goal")
+
+[node name="CamBounds" parent="." instance=ExtResource("12_nws32")]
+position = Vector2(215, 166)
+scale = Vector2(0.195313, 0.328125)
+
+[node name="Gameplay Text" type="CanvasLayer" parent="."]
+layer = -10
+visible = false
+follow_viewport_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Gameplay Text"]
+position = Vector2(105, 120)
+texture = ExtResource("13_qkj6b")
+region_enabled = true
+region_rect = Rect2(0, 27.7505, 64, 23.5269)
+
+[node name="Label" type="Label" parent="Gameplay Text"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -134.0
+offset_top = -34.0
+offset_right = -134.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("14_d0e8i")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_rsfch")
+theme_override_font_sizes/font_size = 16
+text = "CARRY"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="Gameplay Text"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.0
+offset_top = -34.0
+offset_right = -13.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("14_d0e8i")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_rsfch")
+theme_override_font_sizes/font_size = 16
+text = "PARTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="Gameplay Text"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -24.0
+offset_right = -75.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("14_d0e8i")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_rsfch")
+theme_override_font_sizes/font_size = 16
+text = "the"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label4" type="Label" parent="Gameplay Text"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 59.0
+offset_top = -1.0
+offset_right = 59.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("14_d0e8i")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_rsfch")
+theme_override_font_sizes/font_size = 16
+text = "and"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label5" type="Label" parent="Gameplay Text"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 122.0
+offset_top = 31.0
+offset_right = 122.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("14_d0e8i")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_rsfch")
+theme_override_font_sizes/font_size = 16
+text = "BUILD!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite2D3" type="Sprite2D" parent="Gameplay Text"]
+position = Vector2(210, 103)
+texture = ExtResource("16_guloy")
+hframes = 17
+frame = 2
+
+[node name="Sprite2D4" type="Sprite2D" parent="Gameplay Text"]
+position = Vector2(227, 110)
+texture = ExtResource("16_guloy")
+hframes = 17
+frame = 4
+
+[node name="Highlight" type="Sprite2D" parent="Gameplay Text"]
+position = Vector2(245, 101)
+texture = ExtResource("5_c7jr1")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Gameplay Text"]
+position = Vector2(360, 187)
+texture = ExtResource("17_30w5a")
+region_enabled = true
+region_rect = Rect2(0, 27.7505, 64, 23.5269)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="UI"]
+position = Vector2(64, 32)
+texture = ExtResource("18_6oo36")
+
+[node name="Welcome" type="Control" parent="UI"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="UI/Welcome"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.249667
+anchor_top = 0.0593334
+anchor_right = 0.750334
+anchor_bottom = 0.399926
+offset_left = 0.159988
+offset_top = -0.0200043
+offset_right = -0.160034
+offset_bottom = 0.0200043
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("14_d0e8i")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="UI/Welcome/Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("14_d0e8i")
+text = "Building the Hut"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Title" type="Label" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("14_d0e8i")
+theme_override_font_sizes/font_size = 17
+text = "Introduction"
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="Transition" type="ColorRect" parent="UI"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BG" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="Sky2" type="ColorRect" parent="BG"]
+z_index = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.286275, 0, 0.909804, 0.176471)
+
+[node name="Mountains" type="TextureRect" parent="BG"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("19_ta4d3")
+stretch_mode = 1
+
+[node name="Clouds" type="TextureRect" parent="BG"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("20_kqktm")
+stretch_mode = 1
+
+[node name="Sky" type="ColorRect" parent="BG"]
+z_index = -100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.485665, 0.716228, 0.836873, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_k2573")
+}
+
+[node name="Players" parent="." instance=ExtResource("21_wkm4s")]
+rotation = 3.14159
+scale = Vector2(1, -1)
+
+[node name="Decor" type="TileMapLayer" parent="."]
+z_index = -100
+tile_set = SubResource("TileSet_3fk6n")
+
+[node name="Torch" parent="." instance=ExtResource("26_dcclv")]
+visible = false
+position = Vector2(415, 120)
+freeze = true
+
+[node name="WaterVisual" type="Node2D" parent="." node_paths=PackedStringArray("areaManager")]
+self_modulate = Color(1, 1, 1, 0.713726)
+z_index = 200
+position = Vector2(-56, 192)
+script = ExtResource("27_b1t1m")
+areaManager = NodePath("../MasterWaterCollider")
+height = 18
+gridColor = Color(0.296543, 0.287518, 0.979249, 1)
+blockColor = Color(0.757931, 1.3236e-06, 2.88785e-07, 1)
+waterColor = Color(0.0392157, 0.168627, 1, 1)
+blocks = Array[Rect2]([Rect2(6, 3, 6, 15), Rect2(12, 8, 7, 10), Rect2(30, 8, 5, 10), Rect2(35, 4, 5, 14)])
+initialWater = Array[Rect2]([Rect2(0, 3, 6, 14), Rect2(0, 2, 5, 1), Rect2(19, 9, 11, 8), Rect2(19, 8, 6, 1)])
+fillers = Array[Rect2]([Rect2(0, 3, 6, 2)])
+bottoms = Array[Rect2]([Rect2(0, 17, 40, 1), Rect2(6, 2, 6, 1), Rect2(12, 7, 7, 1), Rect2(30, 7, 8, 1), Rect2(35, 3, 5, 1)])
+
+[node name="MasterWaterCollider" parent="." node_paths=PackedStringArray("waterHanlder") instance=ExtResource("28_8n28y")]
+z_index = 99
+position = Vector2(-56, 160)
+FLOAT_FORCE = 120
+flowSpeed = 50.0
+isRiver = true
+waterHanlder = NodePath("../WaterVisual")
+
+[node name="DeathCollider2" parent="." node_paths=PackedStringArray("waterHanlder") instance=ExtResource("28_8n28y")]
+position = Vector2(54, 288)
+FLOAT_FORCE = 120
+flowSpeed = 50.0
+waterHanlder = NodePath("../WaterVisual")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathCollider2"]
+position = Vector2(100.75, 150)
+shape = SubResource("RectangleShape2D_8pi4k")
+
+[node name="Bucket" parent="." instance=ExtResource("29_dvux8")]
+z_index = 1
+position = Vector2(96, 182)
+physics_material_override = ExtResource("30_ngr0v")
+
+[editable path="player1"]
+[editable path="player2"]
+[editable path="Stand"]
+[editable path="Room"]
+[editable path="Roof"]
+[editable path="Goal"]
+[editable path="CamBounds"]

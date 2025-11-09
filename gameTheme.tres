@@ -1,0 +1,58 @@
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://dmm7qxbft8xa2"]
+
+[ext_resource type="FontFile" uid="uid://bwonpfp7ack6f" path="res://Big-Apple-3PM.ttf" id="1_3rt0t"]
+[ext_resource type="Texture2D" uid="uid://ddjygifdf2c7g" path="res://Textures/UI/Big_panel.png" id="1_a6mt2"]
+[ext_resource type="Texture2D" uid="uid://dat4pjj27y8yf" path="res://Textures/UI/normal-button.png" id="1_f3vqj"]
+[ext_resource type="Texture2D" uid="uid://b3btf8ixxxi0e" path="res://Textures/UI/hover.png" id="1_yt2tp"]
+[ext_resource type="Texture2D" uid="uid://btdvff7hvfk13" path="res://Textures/UI/pressed.png" id="2_6gmxh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rt4kx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dwmdf"]
+content_margin_left = 2.0
+content_margin_top = 3.0
+content_margin_right = 2.0
+content_margin_bottom = 1.0
+texture = ExtResource("1_yt2tp")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gdmgq"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+texture = ExtResource("1_f3vqj")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hpc1c"]
+content_margin_left = 2.0
+content_margin_top = 4.0
+content_margin_right = 2.0
+content_margin_bottom = 0.0
+texture = ExtResource("2_6gmxh")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_46mrv"]
+texture = ExtResource("1_a6mt2")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[resource]
+default_font = ExtResource("1_3rt0t")
+default_font_size = 17
+Button/styles/focus = SubResource("StyleBoxEmpty_rt4kx")
+Button/styles/hover = SubResource("StyleBoxTexture_dwmdf")
+Button/styles/normal = SubResource("StyleBoxTexture_gdmgq")
+Button/styles/pressed = SubResource("StyleBoxTexture_hpc1c")
+Panel/styles/panel = SubResource("StyleBoxTexture_46mrv")

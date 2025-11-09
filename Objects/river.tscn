@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3 uid="uid://dj0j2h1kvcnj"]
+
+[ext_resource type="Material" uid="uid://bpcjyupiqqwbj" path="res://riverShader.tres" id="1_ay35s"]
+[ext_resource type="Script" path="res://river.gd" id="1_lbdrm"]
+[ext_resource type="Texture2D" uid="uid://cpcmoj6vyj387" path="res://Textures/riversheet.png" id="1_rtm1n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amvd4"]
+size = Vector2(37.6256, 8.6376)
+
+[sub_resource type="Animation" id="Animation_6ysh8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_h4qpq"]
+resource_name = "flow"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t3e1e"]
+_data = {
+"RESET": SubResource("Animation_6ysh8"),
+"flow": SubResource("Animation_h4qpq")
+}
+
+[node name="River Collider" type="Sprite2D"]
+self_modulate = Color(1, 1, 1, 0)
+material = ExtResource("1_ay35s")
+texture = ExtResource("1_rtm1n")
+offset = Vector2(0, 16)
+hframes = 11
+vframes = 2
+script = ExtResource("1_lbdrm")
+flowSpeed = 50.0
+water_drag = 0.4
+
+[node name="FloatCollider" type="Area2D" parent="."]
+position = Vector2(0, 16)
+collision_layer = 0
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloatCollider"]
+shape = SubResource("RectangleShape2D_amvd4")
+debug_color = Color(0.192157, 0.0862745, 1, 0.164706)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_t3e1e")
+}
+
+[connection signal="area_entered" from="FloatCollider" to="." method="onBodyEntered"]
+[connection signal="area_exited" from="FloatCollider" to="." method="onBodyExited"]
+[connection signal="body_entered" from="FloatCollider" to="." method="onBodyEntered"]
+[connection signal="body_exited" from="FloatCollider" to="." method="onBodyExited"]

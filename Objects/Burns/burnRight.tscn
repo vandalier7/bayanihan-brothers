@@ -1,0 +1,125 @@
+[gd_scene load_steps=10 format=3 uid="uid://f1xo57yhk7xr"]
+
+[ext_resource type="Script" path="res://burnable.gd" id="1_nmusy"]
+[ext_resource type="Texture2D" uid="uid://l5bwhir6wjus" path="res://Textures/Kubo/dryvine.png" id="2_oxjiy"]
+[ext_resource type="Texture2D" uid="uid://cht42a28lqpy6" path="res://Textures/Particles/fire.png" id="3_6tpvc"]
+[ext_resource type="Gradient" uid="uid://rshy75xx3vhw" path="res://burn.tres" id="4_prke8"]
+[ext_resource type="Gradient" uid="uid://bj0rwdf55nrkx" path="res://smoke.tres" id="5_n3ag6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2lwuy"]
+size = Vector2(5, 16)
+
+[sub_resource type="Curve" id="Curve_j7t7g"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.736641, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.381132), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_lj4dg"]
+offsets = PackedFloat32Array(0, 0.285714, 0.660714, 1)
+colors = PackedColorArray(0.28, 0.28, 0.28, 1, 0.360244, 0.360244, 0.360244, 1, 0.15, 0.15, 0.15, 1, 0.21, 0.21, 0.21, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jc6gb"]
+size = Vector2(17, 28)
+
+[node name="BurnRight" type="StaticBody2D" node_paths=PackedStringArray("smokeParticles", "deathParticles")]
+z_index = -2
+collision_layer = 899
+script = ExtResource("1_nmusy")
+smokeParticles = NodePath("smokeParticles")
+deathParticles = NodePath("deathParticles")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(11, 0)
+texture = ExtResource("2_oxjiy")
+hframes = 3
+vframes = 3
+frame = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.5, 0)
+shape = SubResource("RectangleShape2D_2lwuy")
+
+[node name="burnParticles1" type="CPUParticles2D" parent="."]
+z_index = 1
+position = Vector2(6, 6)
+emitting = false
+amount = 4
+lifetime = 0.7
+texture = ExtResource("3_6tpvc")
+emission_shape = 3
+emission_rect_extents = Vector2(2, 0)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, -120)
+initial_velocity_max = 30.0
+scale_amount_min = 0.1
+scale_amount_curve = SubResource("Curve_j7t7g")
+color_ramp = ExtResource("4_prke8")
+
+[node name="burnParticles2" type="CPUParticles2D" parent="."]
+z_index = -5
+position = Vector2(6, 6)
+emitting = false
+amount = 10
+lifetime = 0.7
+texture = ExtResource("3_6tpvc")
+emission_shape = 3
+emission_rect_extents = Vector2(8, 0)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, -120)
+initial_velocity_max = 30.0
+scale_amount_min = 0.1
+scale_amount_curve = SubResource("Curve_j7t7g")
+color_ramp = ExtResource("4_prke8")
+
+[node name="smokeParticles" type="CPUParticles2D" parent="."]
+z_index = -5
+position = Vector2(6, 3)
+emitting = false
+amount = 15
+lifetime = 2.0
+emission_shape = 3
+emission_rect_extents = Vector2(8, 8)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, -40)
+initial_velocity_max = 10.0
+angular_velocity_min = -50.0
+angular_velocity_max = 50.0
+scale_amount_max = 14.0
+scale_amount_curve = SubResource("Curve_j7t7g")
+color_ramp = ExtResource("5_n3ag6")
+
+[node name="deathParticles" type="CPUParticles2D" parent="."]
+z_index = 1
+emitting = false
+amount = 3
+lifetime = 1.5
+one_shot = true
+explosiveness = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(8, 8)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, -80)
+initial_velocity_max = 40.0
+angular_velocity_min = -50.0
+angular_velocity_max = 50.0
+damping_min = 10.0
+damping_max = 20.0
+scale_amount_max = 15.0
+scale_amount_curve = SubResource("Curve_j7t7g")
+color_ramp = SubResource("Gradient_lj4dg")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(5.5, 0)
+shape = SubResource("RectangleShape2D_jc6gb")
+debug_color = Color(1, 0, 0.301961, 0.0509804)
+
+[connection signal="body_entered" from="Area2D" to="." method="bodyEntered"]
+[connection signal="body_exited" from="Area2D" to="." method="bodyExited"]

@@ -1,0 +1,666 @@
+[gd_scene load_steps=46 format=3 uid="uid://bcghytsti3pam"]
+
+[ext_resource type="Theme" uid="uid://dmm7qxbft8xa2" path="res://gameTheme.tres" id="1_7dukp"]
+[ext_resource type="Script" path="res://mainmenu.gd" id="1_kw586"]
+[ext_resource type="Texture2D" uid="uid://bqluj6806ew55" path="res://Textures/UI/main_menu_background.png" id="2_fqnct"]
+[ext_resource type="Script" path="res://levelButton.gd" id="3_2d87o"]
+[ext_resource type="Texture2D" uid="uid://ddjygifdf2c7g" path="res://Textures/UI/Big_panel.png" id="3_nlwbl"]
+[ext_resource type="Texture2D" uid="uid://dkp6ir1ndo3sd" path="res://Textures/UI/banderitas_menu.png" id="3_nu4t8"]
+[ext_resource type="Texture2D" uid="uid://3cyf4j1uxume" path="res://Textures/UI/title_menu.png" id="4_88u2q"]
+[ext_resource type="Texture2D" uid="uid://dhaowv0x1ji1b" path="res://Textures/UI/Button_1.png" id="5_8eynl"]
+[ext_resource type="Texture2D" uid="uid://droiaepv80gxg" path="res://Textures/UI/menu/startNormal.png" id="6_0ghmq"]
+[ext_resource type="Texture2D" uid="uid://copxvxnxv5hrs" path="res://Textures/UI/menu/startPressed.png" id="7_kne3a"]
+[ext_resource type="Texture2D" uid="uid://crmaytbj6px8n" path="res://Textures/UI/Button_2.png" id="7_pm586"]
+[ext_resource type="Texture2D" uid="uid://dikak204jt6mr" path="res://Textures/UI/Button_3.png" id="8_2rrwu"]
+[ext_resource type="Texture2D" uid="uid://bdl7ijua8frbg" path="res://Textures/UI/menu/startHover.png" id="8_r1paf"]
+[ext_resource type="Texture2D" uid="uid://dcbhntuirwesy" path="res://Textures/UI/menu/exitNormal.png" id="9_cwopn"]
+[ext_resource type="Texture2D" uid="uid://bs8ccaj6qnmjq" path="res://Textures/UI/Button_4.png" id="9_jg3lb"]
+[ext_resource type="Texture2D" uid="uid://oug7k76vfeso" path="res://Textures/UI/menu/exitPressed.png" id="10_2oqmu"]
+[ext_resource type="Texture2D" uid="uid://bta4xretuau0x" path="res://Textures/UI/Button_5.png" id="10_4nyit"]
+[ext_resource type="Texture2D" uid="uid://cwthcbiqlvggt" path="res://Textures/UI/menu/exitHoverl.png" id="11_8syx4"]
+[ext_resource type="Texture2D" uid="uid://lc6e6ggcmulk" path="res://Textures/UI/Button_6.png" id="11_ooxdp"]
+[ext_resource type="Texture2D" uid="uid://bclop16fkwjsw" path="res://Textures/UI/Button_7.png" id="12_878x8"]
+[ext_resource type="FontFile" uid="uid://o0xxxmhp70u" path="res://Levels/Vaticanus-G3yVG.ttf" id="12_vrcfs"]
+[ext_resource type="Texture2D" uid="uid://dgfdd4kyfwbgs" path="res://Textures/UI/Button_8.png" id="13_nodhm"]
+[ext_resource type="Texture2D" uid="uid://cjhqqcfyesrr" path="res://Textures/UI/Button_9.png" id="14_ktusr"]
+[ext_resource type="Texture2D" uid="uid://dxwcaujootpg0" path="res://Textures/UI/Button_10.png" id="15_n352t"]
+[ext_resource type="Texture2D" uid="uid://5mj2w37jchw8" path="res://Textures/UI/Button_11.png" id="16_tqj8h"]
+[ext_resource type="Texture2D" uid="uid://d2q5c1n1cjsdu" path="res://Textures/UI/Button_12.png" id="17_srcas"]
+[ext_resource type="Texture2D" uid="uid://tq3fbchonsyl" path="res://Textures/UI/Button_13.png" id="18_tpj1w"]
+[ext_resource type="Texture2D" uid="uid://dnin11b0ovnvk" path="res://Textures/UI/Button_14.png" id="19_ii5st"]
+[ext_resource type="Texture2D" uid="uid://cmyv2o616yrim" path="res://Textures/UI/Button_15.png" id="20_f34fj"]
+[ext_resource type="Texture2D" uid="uid://b54slnlgmpxmw" path="res://Textures/UI/levels_ui.png" id="21_48gfg"]
+[ext_resource type="Texture2D" uid="uid://cpau2i08qv8b4" path="res://Textures/UI/Button_16.png" id="30_2bo2t"]
+[ext_resource type="Texture2D" uid="uid://cgj6d48de6vuv" path="res://Textures/UI/Button_17.png" id="31_tuqgw"]
+[ext_resource type="Texture2D" uid="uid://b4ceic4vetw25" path="res://Textures/UI/Button_18.png" id="32_piq3x"]
+[ext_resource type="Texture2D" uid="uid://csgrlri3whl30" path="res://Textures/UI/Button_19.png" id="33_x4e1o"]
+[ext_resource type="Texture2D" uid="uid://bq5nxips8fslt" path="res://Textures/UI/Button_20.png" id="34_yhqsd"]
+[ext_resource type="Texture2D" uid="uid://771xhcfl0pc7" path="res://Textures/UI/Button_21.png" id="35_but0e"]
+[ext_resource type="PackedScene" uid="uid://sbes3fxx23wc" path="res://Objects/player.tscn" id="37_lmxis"]
+[ext_resource type="Texture2D" uid="uid://4ckeqdxma7m0" path="res://Textures/Player/Clothed Sprite Sheet 2.png" id="38_t3k1g"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s2n0w"]
+texture = ExtResource("3_nlwbl")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="Animation" id="Animation_y0ci6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1aae7"]
+resource_name = "transition"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nehxv"]
+_data = {
+"RESET": SubResource("Animation_y0ci6"),
+"transition": SubResource("Animation_1aae7")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ovl12"]
+size = Vector2(325, 95)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgydd"]
+size = Vector2(150, 222)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vs6g2"]
+size = Vector2(416, 136)
+
+[node name="Level" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kw586")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fqnct")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+z_index = -3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_nu4t8")
+
+[node name="Main Menu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 17.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Main Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_88u2q")
+
+[node name="PlayButton" type="TextureButton" parent="Main Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 191.0
+offset_top = 146.0
+offset_right = -191.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("1_7dukp")
+texture_normal = ExtResource("6_0ghmq")
+texture_pressed = ExtResource("7_kne3a")
+texture_hover = ExtResource("8_r1paf")
+
+[node name="Exit" type="TextureButton" parent="Main Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = 53.0
+offset_right = 49.0
+offset_bottom = 89.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = ExtResource("1_7dukp")
+texture_normal = ExtResource("9_cwopn")
+texture_pressed = ExtResource("10_2oqmu")
+texture_hover = ExtResource("11_8syx4")
+
+[node name="Panel" type="Panel" parent="Main Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.714583
+anchor_top = 0.477778
+anchor_right = 0.977083
+anchor_bottom = 0.903704
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Player1" type="CheckButton" parent="Main Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.71875
+anchor_top = 0.548148
+anchor_right = 0.972917
+anchor_bottom = 0.637037
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("12_vrcfs")
+theme_override_font_sizes/font_size = 16
+text = "Player 1"
+metadata/_edit_use_anchors_ = true
+
+[node name="Player2" type="CheckButton" parent="Main Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.71875
+anchor_top = 0.622222
+anchor_right = 0.972917
+anchor_bottom = 0.711111
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("12_vrcfs")
+theme_override_font_sizes/font_size = 16
+text = "Player 2"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Main Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.71875
+anchor_top = 0.485185
+anchor_right = 0.972917
+anchor_bottom = 0.574074
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_vrcfs")
+theme_override_font_sizes/font_size = 16
+text = "Controllers"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Main Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.71875
+anchor_top = 0.725926
+anchor_right = 0.972917
+anchor_bottom = 0.814815
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_vrcfs")
+theme_override_font_sizes/font_size = 16
+text = "IP Address:"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="IP" type="Label" parent="Main Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.71875
+anchor_top = 0.788889
+anchor_right = 0.972917
+anchor_bottom = 0.877778
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_vrcfs")
+theme_override_font_sizes/font_size = 16
+text = "121.232.343.454"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Level Menu" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Level Menu"]
+z_index = -2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.152083
+anchor_top = 0.144444
+anchor_right = 0.85625
+anchor_bottom = 0.959259
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_s2n0w")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Level Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -7.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("21_48gfg")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Level Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.20625
+anchor_top = 0.244444
+anchor_right = 0.802083
+anchor_bottom = 0.87037
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="GridContainer" type="GridContainer" parent="Level Menu/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/h_separation = 3
+theme_override_constants/v_separation = 3
+columns = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Level Button" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+z_index = -1
+texture_filter = 1
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("5_8eynl")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 1
+
+[node name="Level Button2" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("7_pm586")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 2
+
+[node name="Level Button3" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("8_2rrwu")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 3
+
+[node name="Level Button4" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("9_jg3lb")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 4
+
+[node name="Level Button5" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("10_4nyit")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 5
+
+[node name="Level Button6" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("11_ooxdp")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 6
+
+[node name="Level Button7" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("12_878x8")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 7
+
+[node name="Level Button8" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("13_nodhm")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 8
+
+[node name="Level Button9" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("14_ktusr")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 9
+
+[node name="Level Button10" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("15_n352t")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 10
+
+[node name="Level Button11" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("16_tqj8h")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 11
+
+[node name="Level Button12" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("17_srcas")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 12
+
+[node name="Level Button13" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("18_tpj1w")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 13
+
+[node name="Level Button14" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("19_ii5st")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 14
+
+[node name="Level Button15" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("20_f34fj")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 15
+
+[node name="Level Button16" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("30_2bo2t")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 16
+
+[node name="Level Button17" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("31_tuqgw")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 17
+
+[node name="Level Button18" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("32_piq3x")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 18
+
+[node name="Level Button19" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("33_x4e1o")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 19
+
+[node name="Level Button20" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("34_yhqsd")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 20
+
+[node name="Level Button21" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 54)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+theme = ExtResource("1_7dukp")
+icon = ExtResource("35_but0e")
+expand_icon = true
+script = ExtResource("3_2d87o")
+level = 21
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nehxv")
+}
+
+[node name="player1" parent="." instance=ExtResource("37_lmxis")]
+visible = false
+position = Vector2(-287, -76)
+collision_layer = 9
+
+[node name="Build" parent="player1" index="5"]
+collision_layer = 0
+
+[node name="player2" parent="." instance=ExtResource("37_lmxis")]
+visible = false
+position = Vector2(-194, -73)
+collision_layer = 6
+collision_mask = 2
+lastDir = -1
+id = 2
+
+[node name="Sprite2D" parent="player2" index="1"]
+texture = ExtResource("38_t3k1g")
+flip_h = true
+
+[node name="PickUp" parent="player2" index="4"]
+collision_mask = 2056
+
+[node name="Build" parent="player2" index="5"]
+collision_layer = 0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2(-295, -44)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(96.5, 37.5)
+shape = SubResource("RectangleShape2D_ovl12")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-78, -26)
+shape = SubResource("RectangleShape2D_mgydd")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(212, -26)
+shape = SubResource("RectangleShape2D_mgydd")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(63, -148)
+shape = SubResource("RectangleShape2D_vs6g2")
+
+[connection signal="pressed" from="Main Menu/PlayButton" to="." method="openLevelMenu"]
+[connection signal="pressed" from="Main Menu/Exit" to="." method="_on_exit_pressed"]
+[connection signal="toggled" from="Main Menu/Player1" to="." method="toggle1"]
+[connection signal="toggled" from="Main Menu/Player2" to="." method="toggle2"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button" to="Level Menu/ScrollContainer/GridContainer/Level Button" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button2" to="Level Menu/ScrollContainer/GridContainer/Level Button2" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button3" to="Level Menu/ScrollContainer/GridContainer/Level Button3" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button4" to="Level Menu/ScrollContainer/GridContainer/Level Button4" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button5" to="Level Menu/ScrollContainer/GridContainer/Level Button5" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button6" to="Level Menu/ScrollContainer/GridContainer/Level Button6" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button7" to="Level Menu/ScrollContainer/GridContainer/Level Button7" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button8" to="Level Menu/ScrollContainer/GridContainer/Level Button8" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button9" to="Level Menu/ScrollContainer/GridContainer/Level Button9" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button10" to="Level Menu/ScrollContainer/GridContainer/Level Button10" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button11" to="Level Menu/ScrollContainer/GridContainer/Level Button11" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button12" to="Level Menu/ScrollContainer/GridContainer/Level Button12" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button13" to="Level Menu/ScrollContainer/GridContainer/Level Button13" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button14" to="Level Menu/ScrollContainer/GridContainer/Level Button14" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button15" to="Level Menu/ScrollContainer/GridContainer/Level Button15" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button16" to="Level Menu/ScrollContainer/GridContainer/Level Button16" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button17" to="Level Menu/ScrollContainer/GridContainer/Level Button17" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button18" to="Level Menu/ScrollContainer/GridContainer/Level Button18" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button19" to="Level Menu/ScrollContainer/GridContainer/Level Button19" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button20" to="Level Menu/ScrollContainer/GridContainer/Level Button20" method="onPress"]
+[connection signal="pressed" from="Level Menu/ScrollContainer/GridContainer/Level Button21" to="Level Menu/ScrollContainer/GridContainer/Level Button21" method="onPress"]
+
+[editable path="player1"]
+[editable path="player2"]

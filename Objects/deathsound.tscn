@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://c82rglav100tv"]
+
+[ext_resource type="AudioStream" uid="uid://ccixbl1uge7v5" path="res://SFX/gameover.wav" id="1_ykipm"]
+[ext_resource type="Script" path="res://globalPlayer.gd" id="2_iyodh"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_ykipm")
+script = ExtResource("2_iyodh")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr2uwlh7dks3x"]
+
+[ext_resource type="Script" path="res://reset.gd" id="1_y05rs"]
+
+[node name="Control" type="Button"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -33.0
+offset_top = 4.0
+offset_right = -5.0
+offset_bottom = 32.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 10
+text = "reset"
+script = ExtResource("1_y05rs")
+
+[connection signal="pressed" from="." to="." method="onClick"]

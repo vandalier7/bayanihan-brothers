@@ -1,0 +1,495 @@
+[gd_scene load_steps=25 format=3 uid="uid://dfymj3ljy6eyh"]
+
+[ext_resource type="Texture2D" uid="uid://xijqojpj4vph" path="res://Textures/torchThrowHighlightt.png" id="2_3njoj"]
+[ext_resource type="Script" path="res://Objects/torch.gd" id="2_6iuxn"]
+[ext_resource type="Texture2D" uid="uid://cht42a28lqpy6" path="res://Textures/Particles/fire.png" id="3_3ehc8"]
+[ext_resource type="Texture2D" uid="uid://e5dq1rhpfp5s" path="res://Textures/torchThrow-sheet.png" id="3_ai5dv"]
+[ext_resource type="Gradient" uid="uid://rshy75xx3vhw" path="res://burn.tres" id="4_swbfe"]
+[ext_resource type="Gradient" uid="uid://bj0rwdf55nrkx" path="res://smoke.tres" id="5_2codc"]
+[ext_resource type="Texture2D" uid="uid://1q4q8e6vabb" path="res://Textures/UI/fireHolder.png" id="7_f7oaa"]
+[ext_resource type="Texture2D" uid="uid://c3pdy2vn8i12w" path="res://Textures/UI/fireIcon.png" id="8_hcigv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8uogm"]
+size = Vector2(10, 17)
+
+[sub_resource type="Curve" id="Curve_ivdnp"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.736641, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.381132), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_b4my2"]
+offsets = PackedFloat32Array(0, 0.285714, 0.660714, 1)
+colors = PackedColorArray(0.28, 0.28, 0.28, 1, 0.360244, 0.360244, 0.360244, 1, 0.15, 0.15, 0.15, 1, 0.21, 0.21, 0.21, 0)
+
+[sub_resource type="Animation" id="Animation_w0nja"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("burnParticles3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -26)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Highlight:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ChargeDisplay:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -12)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Flame:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-10, -35)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CollisionShape2D:shape")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_8uogm")]
+}
+
+[sub_resource type="Animation" id="Animation_oyyfu"]
+resource_name = "carry"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("burnParticles3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(10, -4)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ChargeDisplay:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -12), Vector2(0, -13), Vector2(0, -12)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Flame:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -14)]
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x7h6p"]
+size = Vector2(4, 4)
+
+[sub_resource type="Animation" id="Animation_6i6rd"]
+resource_name = "throw"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [2, 3, 4, 5, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("burnParticles3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -13)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Flame:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-10, -23)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("RectangleShape2D_x7h6p")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sp8c0"]
+_data = {
+"RESET": SubResource("Animation_w0nja"),
+"carry": SubResource("Animation_oyyfu"),
+"throw": SubResource("Animation_6i6rd")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y6syo"]
+radius = 36.0139
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nck0x"]
+size = Vector2(10, 9)
+
+[sub_resource type="Curve" id="Curve_bmsy1"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.736641, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.381132), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_ht5ak"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.515267, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.381132), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_qbc8i"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.736641, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.381132), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_gh4jk"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.736641, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_74h1g"]
+offsets = PackedFloat32Array(0, 0.357143, 0.848214)
+colors = PackedColorArray(1, 0.192157, 0, 1, 1, 0.462745, 0, 1, 0.905882, 1, 0.211765, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fh3s2"]
+size = Vector2(6, 9)
+
+[node name="Torch" type="RigidBody2D" node_paths=PackedStringArray("torchParticle", "animator", "top", "highlight", "burnHighlight", "smokeParticles", "douseParticles", "deathParticles")]
+z_index = -2
+collision_layer = 3584
+collision_mask = 512
+lock_rotation = true
+continuous_cd = 2
+script = ExtResource("2_6iuxn")
+torchParticle = NodePath("burnParticles3")
+animator = NodePath("AnimationPlayer")
+knockback = 300
+id = -1
+top = NodePath("Top")
+highlight = NodePath("Highlight")
+burnHighlight = NodePath("burn")
+flammable = false
+important = false
+smokeParticles = NodePath("smokeParticles")
+douseParticles = NodePath("douseParticles")
+deathParticles = NodePath("deathParticles")
+
+[node name="Top" type="Node2D" parent="."]
+position = Vector2(0, -13)
+
+[node name="Highlight" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -15)
+texture = ExtResource("2_3njoj")
+hframes = 7
+
+[node name="burn" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -15)
+texture = ExtResource("2_3njoj")
+hframes = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -15)
+texture = ExtResource("3_ai5dv")
+hframes = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -12.5)
+shape = SubResource("RectangleShape2D_8uogm")
+
+[node name="burnParticles1" type="CPUParticles2D" parent="."]
+z_index = -5
+emitting = false
+amount = 50
+lifetime = 0.7
+texture = ExtResource("3_3ehc8")
+emission_shape = 3
+emission_rect_extents = Vector2(20, 3)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, -120)
+initial_velocity_max = 30.0
+scale_amount_min = 0.1
+scale_amount_curve = SubResource("Curve_ivdnp")
+color_ramp = ExtResource("4_swbfe")
+
+[node name="burnParticles2" type="CPUParticles2D" parent="."]
+z_index = -5
+emitting = false
+amount = 50
+lifetime = 0.7
+texture = ExtResource("3_3ehc8")
+emission_shape = 3
+emission_rect_extents = Vector2(20, 3)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, -120)
+initial_velocity_max = 30.0
+scale_amount_min = 0.1
+scale_amount_curve = SubResource("Curve_ivdnp")
+color_ramp = ExtResource("4_swbfe")
+
+[node name="smokeParticles" type="CPUParticles2D" parent="."]
+z_index = -5
+emitting = false
+amount = 20
+emission_shape = 3
+emission_rect_extents = Vector2(20, 3)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, -40)
+initial_velocity_max = 10.0
+angular_velocity_min = -50.0
+angular_velocity_max = 50.0
+scale_amount_max = 10.0
+scale_amount_curve = SubResource("Curve_ivdnp")
+color_ramp = ExtResource("5_2codc")
+
+[node name="deathParticles" type="CPUParticles2D" parent="."]
+z_index = 1
+position = Vector2(0, -15)
+emitting = false
+amount = 20
+lifetime = 1.5
+one_shot = true
+explosiveness = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(20, 3)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, -80)
+initial_velocity_max = 40.0
+angular_velocity_min = -50.0
+angular_velocity_max = 50.0
+damping_min = 10.0
+damping_max = 20.0
+scale_amount_max = 15.0
+scale_amount_curve = SubResource("Curve_ivdnp")
+color_ramp = SubResource("Gradient_b4my2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_sp8c0")
+}
+
+[node name="BurnArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 259
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BurnArea"]
+position = Vector2(0, -13)
+shape = SubResource("CircleShape2D_y6syo")
+debug_color = Color(1, 0, 0.301961, 0.0509804)
+
+[node name="TriggerArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 320
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerArea"]
+position = Vector2(0, -12.5)
+shape = SubResource("RectangleShape2D_nck0x")
+
+[node name="burnParticles3" type="CPUParticles2D" parent="."]
+position = Vector2(0, -26)
+amount = 3
+lifetime = 0.7
+texture = ExtResource("3_3ehc8")
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, -60)
+initial_velocity_max = 30.0
+scale_amount_min = 0.5
+scale_amount_curve = SubResource("Curve_bmsy1")
+color_ramp = ExtResource("4_swbfe")
+
+[node name="explosion1" type="CPUParticles2D" parent="."]
+z_index = -5
+position = Vector2(0, -12)
+emitting = false
+amount = 30
+lifetime = 0.6
+one_shot = true
+explosiveness = 1.0
+texture = ExtResource("3_3ehc8")
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, -20)
+initial_velocity_min = 100.0
+initial_velocity_max = 150.0
+linear_accel_min = -250.0
+linear_accel_max = -250.0
+damping_max = 30.0
+scale_amount_min = 0.1
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_ht5ak")
+color_ramp = ExtResource("4_swbfe")
+
+[node name="douseParticles" type="CPUParticles2D" parent="."]
+position = Vector2(0, -12)
+emitting = false
+amount = 40
+one_shot = true
+explosiveness = 1.0
+emission_shape = 3
+emission_rect_extents = Vector2(20, 3)
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, -40)
+initial_velocity_min = 30.0
+initial_velocity_max = 40.0
+angular_velocity_min = -50.0
+angular_velocity_max = 50.0
+scale_amount_max = 10.0
+scale_amount_curve = SubResource("Curve_qbc8i")
+color_ramp = ExtResource("5_2codc")
+
+[node name="explosion2" type="CPUParticles2D" parent="."]
+position = Vector2(0, -12)
+emitting = false
+amount = 10
+one_shot = true
+explosiveness = 1.0
+texture = ExtResource("3_3ehc8")
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 120)
+initial_velocity_min = 100.0
+initial_velocity_max = 130.0
+scale_amount_min = 0.1
+scale_amount_curve = SubResource("Curve_gh4jk")
+color_ramp = SubResource("Gradient_74h1g")
+
+[node name="ChargeDisplay" type="Node2D" parent="."]
+visible = false
+position = Vector2(0, -12)
+
+[node name="Holder1" type="Sprite2D" parent="ChargeDisplay"]
+visible = false
+position = Vector2(-9, 3)
+texture = ExtResource("7_f7oaa")
+
+[node name="Holder2" type="Sprite2D" parent="ChargeDisplay"]
+visible = false
+position = Vector2(-4, 3)
+texture = ExtResource("7_f7oaa")
+
+[node name="Holder3" type="Sprite2D" parent="ChargeDisplay"]
+visible = false
+position = Vector2(1, 3)
+texture = ExtResource("7_f7oaa")
+
+[node name="1" type="Sprite2D" parent="ChargeDisplay"]
+visible = false
+position = Vector2(-9, 3)
+texture = ExtResource("8_hcigv")
+
+[node name="2" type="Sprite2D" parent="ChargeDisplay"]
+visible = false
+position = Vector2(-4, 3)
+texture = ExtResource("8_hcigv")
+
+[node name="3" type="Sprite2D" parent="ChargeDisplay"]
+visible = false
+position = Vector2(1, 3)
+texture = ExtResource("8_hcigv")
+
+[node name="Flame" type="Area2D" parent="."]
+position = Vector2(-10, -35)
+collision_layer = 64
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flame"]
+position = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_fh3s2")
+
+[connection signal="body_entered" from="." to="." method="onCollision"]
+[connection signal="body_entered" from="BurnArea" to="." method="onBodyEntered"]
+[connection signal="body_exited" from="BurnArea" to="." method="onBodyExited"]
+[connection signal="body_entered" from="TriggerArea" to="." method="onTrigger"]

@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://co1l12uwcutm2"]
+
+[ext_resource type="Script" path="res://goal.gd" id="1_w1dnn"]
+[ext_resource type="Texture2D" uid="uid://m56eweko1tr4" path="res://Textures/Kubo/hut.png" id="1_x3msr"]
+[ext_resource type="Texture2D" uid="uid://ff410prulpqv" path="res://Textures/Kubo/Banderitas.png" id="3_pt2t4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_28d5k"]
+size = Vector2(28, 22)
+
+[node name="Goal" type="Area2D" node_paths=PackedStringArray("sprite")]
+z_index = -10
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_w1dnn")
+sprite = NodePath("Sprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_28d5k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -3
+texture = ExtResource("1_x3msr")
+hframes = 17
+
+[node name="Darken" type="ColorRect" parent="."]
+z_index = -100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -496.0
+offset_top = -442.0
+offset_right = 552.0
+offset_bottom = 442.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.223529, 0.321569, 0.435294, 0)
+
+[node name="Goal Sign" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(0, -12)
+texture = ExtResource("3_pt2t4")

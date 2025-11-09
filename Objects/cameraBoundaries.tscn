@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cekw1rbfi24j2"]
+
+[ext_resource type="Texture2D" uid="uid://djciurfv0laxq" path="res://icon.svg" id="1_td25t"]
+[ext_resource type="Script" path="res://cameraBounds.gd" id="2_10fu8"]
+
+[node name="CamBounds" type="Sprite2D" node_paths=PackedStringArray("pointA", "pointB")]
+self_modulate = Color(1, 1, 1, 0)
+texture = ExtResource("1_td25t")
+offset = Vector2(64, 64)
+script = ExtResource("2_10fu8")
+pointA = NodePath("A")
+pointB = NodePath("B")
+
+[node name="A" type="Node2D" parent="."]
+
+[node name="B" type="Node2D" parent="."]
+position = Vector2(128, 128)
