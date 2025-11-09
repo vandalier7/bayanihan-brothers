@@ -1,6 +1,6 @@
 [gd_scene load_steps=59 format=4 uid="uid://xr85usjluitv"]
 
-[ext_resource type="Script" path="res://level.gd" id="1_iqjxc"]
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_iqjxc"]
 [ext_resource type="PackedScene" uid="uid://sbes3fxx23wc" path="res://Objects/player.tscn" id="2_qpopl"]
 [ext_resource type="Texture2D" uid="uid://4ckeqdxma7m0" path="res://Textures/Player/Clothed Sprite Sheet 2.png" id="3_cvqlk"]
 [ext_resource type="PackedScene" uid="uid://pl2x1nqikijo" path="res://Objects/liftable.tscn" id="4_bp1ym"]
@@ -11,7 +11,7 @@
 [ext_resource type="PhysicsMaterial" uid="uid://c6vjrlf0dc6d8" path="res://static.tres" id="9_3ionl"]
 [ext_resource type="Texture2D" uid="uid://byctnax620t86" path="res://Textures/Tilesheet.png" id="10_wjcba"]
 [ext_resource type="PackedScene" uid="uid://co1l12uwcutm2" path="res://Objects/goal.tscn" id="11_uv255"]
-[ext_resource type="Script" path="res://camera.gd" id="12_pdu5m"]
+[ext_resource type="Script" path="res://Scripts/camera.gd" id="12_pdu5m"]
 [ext_resource type="PackedScene" uid="uid://cekw1rbfi24j2" path="res://Objects/cameraBoundaries.tscn" id="13_cnbuy"]
 [ext_resource type="Texture2D" uid="uid://b5qbhkoppycsx" path="res://Textures/Tutorials/throw1.png" id="15_0klyv"]
 [ext_resource type="Texture2D" uid="uid://ni7gxo0pcqhc" path="res://Textures/Tutorials/lift.png" id="16_k5vqw"]
@@ -36,7 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://f1xo57yhk7xr" path="res://Objects/Burns/burnRight.tscn" id="35_46jre"]
 [ext_resource type="PackedScene" uid="uid://4kp2j05do437" path="res://Objects/Burns/wick.tscn" id="36_eljd6"]
 [ext_resource type="PackedScene" uid="uid://dpgp4l5u1l01u" path="res://Objects/Burns/wood.tscn" id="37_6b7eh"]
-[ext_resource type="Script" path="res://dynamicWater.gd" id="38_80id8"]
+[ext_resource type="Script" path="res://Scripts/dynamicWater.gd" id="38_80id8"]
 [ext_resource type="Texture2D" uid="uid://dbjt41gfhxa1y" path="res://Textures/Decor/wall.png" id="38_mwpse"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_najhu"]

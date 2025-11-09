@@ -1,6 +1,6 @@
 [gd_scene load_steps=44 format=4 uid="uid://diqhup1u2iqkb"]
 
-[ext_resource type="Script" path="res://level.gd" id="1_j3fo2"]
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_j3fo2"]
 [ext_resource type="PackedScene" uid="uid://sbes3fxx23wc" path="res://Objects/player.tscn" id="2_3la3q"]
 [ext_resource type="Texture2D" uid="uid://4ckeqdxma7m0" path="res://Textures/Player/Clothed Sprite Sheet 2.png" id="3_21fn2"]
 [ext_resource type="PackedScene" uid="uid://pl2x1nqikijo" path="res://Objects/liftable.tscn" id="3_v7lkc"]
@@ -10,7 +10,7 @@
 [ext_resource type="PhysicsMaterial" uid="uid://c6vjrlf0dc6d8" path="res://static.tres" id="7_6n6lj"]
 [ext_resource type="Texture2D" uid="uid://byctnax620t86" path="res://Textures/Tilesheet.png" id="8_jbmbq"]
 [ext_resource type="PackedScene" uid="uid://co1l12uwcutm2" path="res://Objects/goal.tscn" id="9_8nlj6"]
-[ext_resource type="Script" path="res://camera.gd" id="10_jorfi"]
+[ext_resource type="Script" path="res://Scripts/camera.gd" id="10_jorfi"]
 [ext_resource type="PackedScene" uid="uid://cekw1rbfi24j2" path="res://Objects/cameraBoundaries.tscn" id="11_raevn"]
 [ext_resource type="Theme" uid="uid://dmm7qxbft8xa2" path="res://gameTheme.tres" id="12_fbxjs"]
 [ext_resource type="Texture2D" uid="uid://ddami5cr8f7su" path="res://Textures/Mountain.png" id="13_3b1rt"]

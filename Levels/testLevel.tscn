@@ -1,6 +1,6 @@
 [gd_scene load_steps=57 format=4 uid="uid://dtwpgpbteiphu"]
 
-[ext_resource type="Script" path="res://level.gd" id="1_nqluo"]
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_nqluo"]
 [ext_resource type="PackedScene" uid="uid://sbes3fxx23wc" path="res://Objects/player.tscn" id="2_ucoip"]
 [ext_resource type="Texture2D" uid="uid://4ckeqdxma7m0" path="res://Textures/Player/Clothed Sprite Sheet 2.png" id="3_hfpua"]
 [ext_resource type="PackedScene" uid="uid://pl2x1nqikijo" path="res://Objects/liftable.tscn" id="4_h5ydw"]
@@ -11,7 +11,7 @@
 [ext_resource type="PhysicsMaterial" uid="uid://c6vjrlf0dc6d8" path="res://static.tres" id="8_pha28"]
 [ext_resource type="Texture2D" uid="uid://byctnax620t86" path="res://Textures/Tilesheet.png" id="9_ccwx8"]
 [ext_resource type="PackedScene" uid="uid://co1l12uwcutm2" path="res://Objects/goal.tscn" id="10_u5k6w"]
-[ext_resource type="Script" path="res://camera.gd" id="11_bnbab"]
+[ext_resource type="Script" path="res://Scripts/camera.gd" id="11_bnbab"]
 [ext_resource type="PackedScene" uid="uid://cekw1rbfi24j2" path="res://Objects/cameraBoundaries.tscn" id="12_d6wnu"]
 [ext_resource type="Texture2D" uid="uid://u8meghehc2n6" path="res://Textures/Tutorials/wasd.png" id="13_mncdm"]
 [ext_resource type="Texture2D" uid="uid://c7m2sepxlol1f" path="res://Textures/Tutorials/arrows.png" id="14_yhffu"]
@@ -37,7 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://f1xo57yhk7xr" path="res://Objects/Burns/burnRight.tscn" id="34_1ra20"]
 [ext_resource type="PackedScene" uid="uid://4kp2j05do437" path="res://Objects/Burns/wick.tscn" id="36_qloda"]
 [ext_resource type="PackedScene" uid="uid://dpgp4l5u1l01u" path="res://Objects/Burns/wood.tscn" id="36_vw6d2"]
-[ext_resource type="Script" path="res://dynamicWater.gd" id="38_6ll1q"]
+[ext_resource type="Script" path="res://Scripts/dynamicWater.gd" id="38_6ll1q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_najhu"]
 size = Vector2(28, 8)

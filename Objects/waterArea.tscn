@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://h41jlmt688rt"]
 
-[ext_resource type="Material" uid="uid://bpcjyupiqqwbj" path="res://riverShader.tres" id="1_n1h5c"]
+[ext_resource type="Material" uid="uid://bpcjyupiqqwbj" path="res://Shaders/riverShader.tres" id="1_n1h5c"]
 [ext_resource type="Texture2D" uid="uid://ddlgrbere280h" path="res://Textures/Player/bar.png" id="2_mc0fw"]
-[ext_resource type="Script" path="res://river.gd" id="3_da46u"]
+[ext_resource type="Script" path="res://Scripts/river.gd" id="3_da46u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iac1r"]
 size = Vector2(16, 16)

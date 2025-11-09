@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bwonpfp7ack6f"
-path="res://.godot/imported/Big-Apple-3PM.ttf-b96a0b0e12d2fa6af6bc426192d800b2.fontdata"
+uid="uid://b25lycmle56cw"
+path="res://.godot/imported/slkscr.ttf-63f9080dd5c0e7709f0644fd054a886a.fontdata"
 
 [deps]
 
-source_file="res://Big-Apple-3PM.ttf"
-dest_files=["res://.godot/imported/Big-Apple-3PM.ttf-b96a0b0e12d2fa6af6bc426192d800b2.fontdata"]
+source_file="res://Fonts/slkscr.ttf"
+dest_files=["res://.godot/imported/slkscr.ttf-63f9080dd5c0e7709f0644fd054a886a.fontdata"]
 
 [params]
 

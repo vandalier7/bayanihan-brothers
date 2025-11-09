@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=11 format=3 uid="uid://dmm7qxbft8xa2"]
 
-[ext_resource type="FontFile" uid="uid://bwonpfp7ack6f" path="res://Big-Apple-3PM.ttf" id="1_3rt0t"]
+[ext_resource type="FontFile" uid="uid://bwonpfp7ack6f" path="res://Fonts/Big-Apple-3PM.ttf" id="1_3rt0t"]
 [ext_resource type="Texture2D" uid="uid://ddjygifdf2c7g" path="res://Textures/UI/Big_panel.png" id="1_a6mt2"]
 [ext_resource type="Texture2D" uid="uid://dat4pjj27y8yf" path="res://Textures/UI/normal-button.png" id="1_f3vqj"]
 [ext_resource type="Texture2D" uid="uid://b3btf8ixxxi0e" path="res://Textures/UI/hover.png" id="1_yt2tp"]

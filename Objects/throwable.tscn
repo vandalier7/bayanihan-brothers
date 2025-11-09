@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://dqgtk4hfml3cc"]
 
-[ext_resource type="Script" path="res://throwable.gd" id="1_8y6ur"]
+[ext_resource type="Script" path="res://Scripts/throwable.gd" id="1_8y6ur"]
 [ext_resource type="Texture2D" uid="uid://cqwqegiw4ewyw" path="res://Textures/Player/Clothed Sprite Sheet 1.png" id="2_k21t0"]
 [ext_resource type="Texture2D" uid="uid://dvbi1mfcaw0em" path="res://Textures/Player/barbehind.png" id="3_yfwrs"]
 [ext_resource type="Texture2D" uid="uid://ddlgrbere280h" path="res://Textures/Player/bar.png" id="4_6edak"]

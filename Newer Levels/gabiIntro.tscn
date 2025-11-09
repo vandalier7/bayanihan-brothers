@@ -1,6 +1,6 @@
 [gd_scene load_steps=47 format=3 uid="uid://hvfbc8pwfisj"]
 
-[ext_resource type="Script" path="res://level.gd" id="1_0p7bp"]
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_0p7bp"]
 [ext_resource type="PackedScene" uid="uid://sbes3fxx23wc" path="res://Objects/player.tscn" id="2_05sfh"]
 [ext_resource type="Texture2D" uid="uid://4ckeqdxma7m0" path="res://Textures/Player/Clothed Sprite Sheet 2.png" id="3_db6qy"]
 [ext_resource type="PackedScene" uid="uid://pl2x1nqikijo" path="res://Objects/liftable.tscn" id="4_wuav1"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://wuq674usl4cp" path="res://Textures/Kubo/roofHighlight.png" id="8_c30md"]
 [ext_resource type="PackedScene" uid="uid://co1l12uwcutm2" path="res://Objects/goal.tscn" id="9_878ug"]
 [ext_resource type="PackedScene" uid="uid://d1gds7u4hjhap" path="res://Objects/blockMap.tscn" id="10_6lkbt"]
-[ext_resource type="Script" path="res://camera.gd" id="11_by6ca"]
+[ext_resource type="Script" path="res://Scripts/camera.gd" id="11_by6ca"]
 [ext_resource type="PackedScene" uid="uid://cekw1rbfi24j2" path="res://Objects/cameraBoundaries.tscn" id="12_gyvfx"]
 [ext_resource type="Texture2D" uid="uid://ni7gxo0pcqhc" path="res://Textures/Tutorials/lift.png" id="13_2vunm"]
 [ext_resource type="Theme" uid="uid://dmm7qxbft8xa2" path="res://gameTheme.tres" id="14_7iyp7"]

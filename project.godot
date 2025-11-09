@@ -17,11 +17,11 @@ config/icon="res://appicon.png"
 
 [autoload]
 
-Data="*res://data.gd"
-GlobalPlayer="*res://globalPlayer.gd"
-Bgm="*res://bgm.gd"
-TimeUtil="*res://TimeUtil.gd"
-FireSfx="*res://fireSFX.gd"
+Data="*res://Scripts/data.gd"
+GlobalPlayer="*res://Scripts/globalPlayer.gd"
+Bgm="*res://Scripts/bgm.gd"
+TimeUtil="*res://Scripts/TimeUtil.gd"
+FireSfx="*res://Scripts/fireSFX.gd"
 
 [display]
 

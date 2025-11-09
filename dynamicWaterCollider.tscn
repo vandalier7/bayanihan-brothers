@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://brlbaqrpxxr8i"]
 
-[ext_resource type="Script" path="res://WaterCollision2D.gd" id="1_oyy1f"]
+[ext_resource type="Script" path="res://Scripts/WaterCollision2D.gd" id="1_oyy1f"]
 
 [node name="DynamicWaterCollider" type="CollisionShape2D"]
 z_index = 200

@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://bx4mfryc4hmh"]
 
-[ext_resource type="Script" path="res://Objects/gabi.gd" id="1_efxw6"]
+[ext_resource type="Script" path="res://Scripts/gabi.gd" id="1_efxw6"]
 [ext_resource type="Texture2D" uid="uid://8oifrwliyayt" path="res://Textures/Sheets/heartVineSheet.png" id="1_gqv1c"]
 [ext_resource type="Texture2D" uid="uid://k8g2u1rinph4" path="res://Textures/Sheets/heartleafSheet.png" id="2_wl0ij"]
 [ext_resource type="Texture2D" uid="uid://te422nabry2u" path="res://Textures/Sheets/heartRootSheet.png" id="4_oef8k"]

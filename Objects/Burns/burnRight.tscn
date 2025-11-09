@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://f1xo57yhk7xr"]
 
-[ext_resource type="Script" path="res://burnable.gd" id="1_nmusy"]
+[ext_resource type="Script" path="res://Scripts/burnable.gd" id="1_nmusy"]
 [ext_resource type="Texture2D" uid="uid://l5bwhir6wjus" path="res://Textures/Kubo/dryvine.png" id="2_oxjiy"]
 [ext_resource type="Texture2D" uid="uid://cht42a28lqpy6" path="res://Textures/Particles/fire.png" id="3_6tpvc"]
-[ext_resource type="Gradient" uid="uid://rshy75xx3vhw" path="res://burn.tres" id="4_prke8"]
-[ext_resource type="Gradient" uid="uid://bj0rwdf55nrkx" path="res://smoke.tres" id="5_n3ag6"]
+[ext_resource type="Gradient" uid="uid://rshy75xx3vhw" path="res://Shaders/burn.tres" id="4_prke8"]
+[ext_resource type="Gradient" uid="uid://bj0rwdf55nrkx" path="res://Shaders/smoke.tres" id="5_n3ag6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2lwuy"]
 size = Vector2(5, 16)

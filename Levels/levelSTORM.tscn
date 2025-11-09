@@ -1,6 +1,6 @@
 [gd_scene load_steps=48 format=4 uid="uid://dudo5gjjn5aid"]
 
-[ext_resource type="Script" path="res://level.gd" id="1_2xkdi"]
+[ext_resource type="Script" path="res://Scripts/level.gd" id="1_2xkdi"]
 [ext_resource type="PackedScene" uid="uid://sbes3fxx23wc" path="res://Objects/player.tscn" id="2_tar3u"]
 [ext_resource type="Texture2D" uid="uid://4ckeqdxma7m0" path="res://Textures/Player/Clothed Sprite Sheet 2.png" id="3_h6lbq"]
 [ext_resource type="PackedScene" uid="uid://pl2x1nqikijo" path="res://Objects/liftable.tscn" id="4_2uery"]
@@ -11,7 +11,7 @@
 [ext_resource type="PhysicsMaterial" uid="uid://c6vjrlf0dc6d8" path="res://static.tres" id="9_of81y"]
 [ext_resource type="Texture2D" uid="uid://byctnax620t86" path="res://Textures/Tilesheet.png" id="10_guvgp"]
 [ext_resource type="PackedScene" uid="uid://co1l12uwcutm2" path="res://Objects/goal.tscn" id="11_i47ae"]
-[ext_resource type="Script" path="res://camera.gd" id="12_csdfx"]
+[ext_resource type="Script" path="res://Scripts/camera.gd" id="12_csdfx"]
 [ext_resource type="PackedScene" uid="uid://cekw1rbfi24j2" path="res://Objects/cameraBoundaries.tscn" id="13_wutbm"]
 [ext_resource type="Texture2D" uid="uid://myvw7108paer" path="res://Textures/Tutorials/actions.png" id="14_jh75d"]
 [ext_resource type="Theme" uid="uid://dmm7qxbft8xa2" path="res://gameTheme.tres" id="15_kfwbu"]
@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://bkoye6mb4om2i" path="res://Textures/Decor/Trees.png" id="24_xi71k"]
 [ext_resource type="Texture2D" uid="uid://oys5hd5xf2cp" path="res://Textures/Decor/Signs.png" id="25_vrcdi"]
 [ext_resource type="PackedScene" uid="uid://dfymj3ljy6eyh" path="res://Objects/torch.tscn" id="26_da867"]
-[ext_resource type="Script" path="res://dynamicWater.gd" id="27_yls8x"]
+[ext_resource type="Script" path="res://Scripts/dynamicWater.gd" id="27_yls8x"]
 [ext_resource type="Texture2D" uid="uid://dbjt41gfhxa1y" path="res://Textures/Decor/wall.png" id="28_ojtps"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_najhu"]

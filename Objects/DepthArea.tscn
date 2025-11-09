@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bhndi0djl31k0"]
 
-[ext_resource type="Script" path="res://Objects/depthArea.gd" id="1_ldjum"]
+[ext_resource type="Script" path="res://Scripts/depthArea.gd" id="1_ldjum"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v0y85"]
 

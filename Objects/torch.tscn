@@ -1,11 +1,11 @@
 [gd_scene load_steps=25 format=3 uid="uid://dfymj3ljy6eyh"]
 
 [ext_resource type="Texture2D" uid="uid://xijqojpj4vph" path="res://Textures/torchThrowHighlightt.png" id="2_3njoj"]
-[ext_resource type="Script" path="res://Objects/torch.gd" id="2_6iuxn"]
+[ext_resource type="Script" path="res://Scripts/torch.gd" id="2_6iuxn"]
 [ext_resource type="Texture2D" uid="uid://cht42a28lqpy6" path="res://Textures/Particles/fire.png" id="3_3ehc8"]
 [ext_resource type="Texture2D" uid="uid://e5dq1rhpfp5s" path="res://Textures/torchThrow-sheet.png" id="3_ai5dv"]
-[ext_resource type="Gradient" uid="uid://rshy75xx3vhw" path="res://burn.tres" id="4_swbfe"]
-[ext_resource type="Gradient" uid="uid://bj0rwdf55nrkx" path="res://smoke.tres" id="5_2codc"]
+[ext_resource type="Gradient" uid="uid://rshy75xx3vhw" path="res://Shaders/burn.tres" id="4_swbfe"]
+[ext_resource type="Gradient" uid="uid://bj0rwdf55nrkx" path="res://Shaders/smoke.tres" id="5_2codc"]
 [ext_resource type="Texture2D" uid="uid://1q4q8e6vabb" path="res://Textures/UI/fireHolder.png" id="7_f7oaa"]
 [ext_resource type="Texture2D" uid="uid://c3pdy2vn8i12w" path="res://Textures/UI/fireIcon.png" id="8_hcigv"]
 

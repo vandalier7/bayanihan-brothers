@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://sbes3fxx23wc"]
 
-[ext_resource type="Script" path="res://player1.gd" id="1_3bkxr"]
+[ext_resource type="Script" path="res://Scripts/player1.gd" id="1_3bkxr"]
 [ext_resource type="Texture2D" uid="uid://cqwqegiw4ewyw" path="res://Textures/Player/Clothed Sprite Sheet 1.png" id="2_y3nx8"]
 [ext_resource type="Theme" uid="uid://dmm7qxbft8xa2" path="res://gameTheme.tres" id="3_8n8ou"]
 [ext_resource type="Texture2D" uid="uid://djciurfv0laxq" path="res://icon.svg" id="3_b118l"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dvbi1mfcaw0em" path="res://Textures/Player/barbehind.png" id="7_arhw0"]
 [ext_resource type="Texture2D" uid="uid://ddlgrbere280h" path="res://Textures/Player/bar.png" id="8_iwlat"]
 [ext_resource type="Texture2D" uid="uid://cht42a28lqpy6" path="res://Textures/Particles/fire.png" id="9_c3jh8"]
-[ext_resource type="Script" path="res://Objects/lineAssist.gd" id="10_2o7a1"]
+[ext_resource type="Script" path="res://Scripts/lineAssist.gd" id="10_2o7a1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1rtb3"]
 size = Vector2(14, 13)

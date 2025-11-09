@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cekw1rbfi24j2"]
 
 [ext_resource type="Texture2D" uid="uid://djciurfv0laxq" path="res://icon.svg" id="1_td25t"]
-[ext_resource type="Script" path="res://cameraBounds.gd" id="2_10fu8"]
+[ext_resource type="Script" path="res://Scripts/cameraBounds.gd" id="2_10fu8"]
 
 [node name="CamBounds" type="Sprite2D" node_paths=PackedStringArray("pointA", "pointB")]
 self_modulate = Color(1, 1, 1, 0)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dj0j2h1kvcnj"]
 
-[ext_resource type="Material" uid="uid://bpcjyupiqqwbj" path="res://riverShader.tres" id="1_ay35s"]
-[ext_resource type="Script" path="res://river.gd" id="1_lbdrm"]
+[ext_resource type="Material" uid="uid://bpcjyupiqqwbj" path="res://Shaders/riverShader.tres" id="1_ay35s"]
+[ext_resource type="Script" path="res://Scripts/river.gd" id="1_lbdrm"]
 [ext_resource type="Texture2D" uid="uid://cpcmoj6vyj387" path="res://Textures/riversheet.png" id="1_rtm1n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_amvd4"]
