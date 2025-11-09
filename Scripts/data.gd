@@ -22,27 +22,9 @@ var controllers = {
 }
 
 var levels = {
-	0 : preload("res://Levels/tutorial.tscn"),
-	1 : preload("res://Levels/level1.tscn"),
-	2 : preload("res://Levels/level3.tscn"),
-	3 : preload("res://Levels/level4.tscn"), #mind the gap
-	4 : preload("res://Levels/level2.tscn"),
-	5 : preload("res://Levels/level5.tscn"),
-	6 : preload("res://Levels/level6.tscn"), #catch this!
-	7 : preload("res://Levels/level7.tscn"),
-	8 : preload("res://Levels/level8.tscn"),
-	9 : preload("res://Levels/level9.tscn"),
-	10 : preload("res://Levels/level10.tscn"),
-	11 : preload("res://Levels/level11.tscn"),
-	12 : preload("res://Levels/level12.tscn"),
-	13 : preload("res://Levels/level13.tscn"),
-	14 : preload("res://Levels/level14.tscn"),
-	15 : preload("res://Levels/level15.tscn"),
-	16 : preload("res://Levels/level16.tscn"),
-	17 : preload("res://Levels/level17.tscn"),
-	18 : preload("res://Levels/level18.tscn"),
-	19 : preload("res://Levels/level19.tscn"),
-	20 : preload("res://Levels/level20.tscn"),
+	0 : preload("res://Final_Levels/0 - tutorial.tscn"),
+	1 : preload("res://Final_Levels/01 - intro to coop.tscn"),
+	
 	
 	
 	

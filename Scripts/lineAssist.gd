@@ -37,7 +37,7 @@ func _draw() -> void:
 	var i: float = 0
 	for point in points:
 		i += 1.0/float(len(points))
-		draw_circle(point, baseSize + (1 - i), Color.RED)
+		draw_circle(point, baseSize + (1 - i), Color.WHITE)
 		#else:
 			#draw_circle(point, baseSize * startingDecay + (1 - i) * decay, Color(1, 0, 0, ((1 - i)/1 - decay) - 0.1))
 			

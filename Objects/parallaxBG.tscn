@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://dujfn57iseb1u"]
+
+[ext_resource type="Texture2D" uid="uid://ddami5cr8f7su" path="res://Textures/Mountain.png" id="1_nnu1s"]
+[ext_resource type="Texture2D" uid="uid://dis6pkdby5j6w" path="res://Textures/Clouds.png" id="2_wxdl5"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_ignore_camera_zoom = true
+
+[node name="Sky" type="ColorRect" parent="."]
+z_index = -100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.485665, 0.716228, 0.836873, 1)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(420, 0)
+
+[node name="Mountains" type="TextureRect" parent="ParallaxLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 630.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nnu1s")
+stretch_mode = 1
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(420, 0)
+
+[node name="Clouds" type="TextureRect" parent="ParallaxLayer2"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 630.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wxdl5")
+stretch_mode = 1
