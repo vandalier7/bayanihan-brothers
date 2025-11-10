@@ -24,6 +24,8 @@ var controllers = {
 var levels = {
 	0 : preload("res://Final_Levels/0 - tutorial.tscn"),
 	1 : preload("res://Final_Levels/01 - intro to coop.tscn"),
+	2 : preload("res://Final_Levels/02 - intro to throw.tscn"),
+	
 	
 	
 	

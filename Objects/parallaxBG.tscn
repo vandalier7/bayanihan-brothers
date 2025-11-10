@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://dis6pkdby5j6w" path="res://Textures/Clouds.png" id="2_wxdl5"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
-scroll_ignore_camera_zoom = true
 
 [node name="Sky" type="ColorRect" parent="."]
 z_index = -100

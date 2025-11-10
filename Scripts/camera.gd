@@ -1,5 +1,7 @@
 extends Camera2D
 
+var ALLOW_ZOOM = false
+
 @export var staticPosition: bool = false
 @export var player1: Player1
 @export var player2: Player1
@@ -50,7 +52,9 @@ func _process(delta: float) -> void:
 	pos = clampPos(((pos1 + pos2)*0.5) + camOffset)
 	var res = lerp(global_position, pos, 0.05)
 	global_position = Vector2(round(res.x), round(res.y))
-
+	
+	if not ALLOW_ZOOM: return
+	
 	var dist = pos1.distance_to(pos2)
 	if dist >= 440:
 		var value = 440.0/dist
