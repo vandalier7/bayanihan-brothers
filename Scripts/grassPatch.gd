@@ -5,6 +5,7 @@ var wind_speed: float = 2.0      # how fast the blades sway
 var wind_direction: float = 0.0  # base tilt angle (negative = left, positive = right)
 var pushback_strength: float = 35.0  # how far to push back
 var pushback_duration: float = 0.3  # how long the pushback lasts
+var flowerChance: float
 
 
 var blades = []
@@ -21,6 +22,7 @@ func _ready() -> void:
 	wind_speed = group.wind_speed
 	pushback_duration = group.pushback_duration
 	pushback_strength = group.pushback_strength
+	flowerChance = group.flowerChance
 	
 	
 	blades = get_children()
@@ -32,7 +34,11 @@ func _ready() -> void:
 		if not is_instance_of(blade, Sprite2D): 
 			blades.erase(blade)
 			continue
-		blade.frame = i
+		var roll = randf_range(0, 1)
+		if roll > flowerChance:
+			blade.frame = i
+		else:
+			blade.frame = randi_range(4, 12)
 		i += 1
 		if flip:
 			blade.z_index = -3

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dckavf0hpd0q1"]
+[gd_scene load_steps=4 format=3 uid="uid://c1tobu0uttcl4"]
 
 [ext_resource type="Texture2D" uid="uid://b38wsf56g1bb6" path="res://Textures/Sheets/grassBlades.png" id="1_0esky"]
 [ext_resource type="Script" path="res://Scripts/grassPatch.gd" id="1_lyofy"]
@@ -14,12 +14,14 @@ position = Vector2(1, 0)
 texture = ExtResource("1_0esky")
 offset = Vector2(0, -8)
 hframes = 4
+vframes = 4
 
 [node name="GrassBlade2" type="Sprite2D" parent="."]
 position = Vector2(3, 0)
 texture = ExtResource("1_0esky")
 offset = Vector2(0, -8)
 hframes = 4
+vframes = 4
 frame = 1
 
 [node name="GrassBlade3" type="Sprite2D" parent="."]
@@ -27,6 +29,7 @@ position = Vector2(-3, 0)
 texture = ExtResource("1_0esky")
 offset = Vector2(0, -8)
 hframes = 4
+vframes = 4
 frame = 2
 
 [node name="GrassBlade4" type="Sprite2D" parent="."]
@@ -34,6 +37,7 @@ position = Vector2(-1, 0)
 texture = ExtResource("1_0esky")
 offset = Vector2(0, -8)
 hframes = 4
+vframes = 4
 frame = 3
 
 [node name="Area2D" type="Area2D" parent="."]
