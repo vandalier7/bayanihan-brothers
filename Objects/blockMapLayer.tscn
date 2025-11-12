@@ -786,8 +786,8 @@ texture = ExtResource("3_ysai0")
 4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_xm7kh"]
-physics_layer_0/collision_layer = 131
-physics_layer_0/collision_mask = 131
+physics_layer_0/collision_layer = 32899
+physics_layer_0/collision_mask = 32899
 physics_layer_0/physics_material = ExtResource("1_ktrki")
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Plain Dirt"

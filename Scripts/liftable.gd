@@ -37,6 +37,8 @@ var surfaceLevel: float = 0
 
 var playersOnMe: int = 0
 
+var collider: CollisionShape2D
+
 func depthOverride(boolean: bool, value: float = 0):
 	customDepth = boolean
 	depthEntry = value
@@ -110,6 +112,12 @@ func _ready() -> void:
 	sprite = get_node("Sprite2D")
 	originalLayer = collision_layer
 	originalMask = collision_mask
+	for i in range(get_child_count()):
+		if is_instance_of(get_child(i), CollisionShape2D):
+			collider = get_child(i)
+			break
+	assert(is_instance_valid(collider), "Collider not found")
+		
 	for i in range(2):
 		particles.append(get_node("burnParticles%d" % (i + 1)))
 	initialGradient = particles[0].color_ramp
@@ -118,12 +126,17 @@ func _ready() -> void:
 	originalAmount[0] = particles[0].amount
 	originalAmount[1] = particles[1].amount
 
-func allowPlayerInteractionForThisFrame():
-	collision_layer = originalLayer + 3
-	#collision_mask = originalLayer + 3
+func allowPlayerInteractionForThisFrame(value):
+	if value:
+		collision_layer = originalLayer + 3
+		collision_mask = originalLayer - 125
+		#collider.one_way_collision = true
+	else:
+		collision_layer = originalLayer
+		collision_mask = originalMask
+		#collider.one_way_collision = false
+		
 
 func _process(delta: float) -> void:
 	burn(delta)
-	if collision_layer == originalLayer + 3:
-		collision_layer = originalLayer
-		collision_mask = originalMask
+	

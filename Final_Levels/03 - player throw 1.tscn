@@ -408,7 +408,6 @@ position = Vector2(-167, 128)
 z_index = -4
 position = Vector2(74, 160)
 script = ExtResource("4_7umcl")
-type = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="Tree"]
 texture = ExtResource("5_jfq6w")
@@ -472,17 +471,17 @@ collision_layer = 0
 [node name="Stand" parent="." instance=ExtResource("7_x3aus")]
 position = Vector2(244, 220)
 
-[node name="Sprite2D" parent="Stand" index="0"]
+[node name="CollisionShape2D" parent="Stand" index="0"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_najhu")
+
+[node name="Sprite2D" parent="Stand" index="1"]
 position = Vector2(0, -21)
 frame = 1
 
-[node name="Highlight" parent="Stand" index="2"]
+[node name="Highlight" parent="Stand" index="3"]
 position = Vector2(0, -20)
 texture = ExtResource("8_n0h60")
-
-[node name="CollisionShape2D" parent="Stand" index="3"]
-position = Vector2(0, -5)
-shape = SubResource("RectangleShape2D_najhu")
 
 [node name="Top" parent="Stand" index="4"]
 position = Vector2(0, -6)
@@ -491,17 +490,17 @@ position = Vector2(0, -6)
 position = Vector2(360, 156)
 id = 1
 
-[node name="Sprite2D" parent="Room" index="0"]
+[node name="CollisionShape2D" parent="Room" index="0"]
+position = Vector2(0.5, -8)
+shape = SubResource("RectangleShape2D_fbwri")
+
+[node name="Sprite2D" parent="Room" index="1"]
 position = Vector2(0, -21)
 frame = 2
 
-[node name="Highlight" parent="Room" index="2"]
+[node name="Highlight" parent="Room" index="3"]
 position = Vector2(0, -20)
 texture = ExtResource("9_7wwaw")
-
-[node name="CollisionShape2D" parent="Room" index="3"]
-position = Vector2(0.5, -8)
-shape = SubResource("RectangleShape2D_fbwri")
 
 [node name="Top" parent="Room" index="4"]
 position = Vector2(0, -9)
@@ -510,17 +509,17 @@ position = Vector2(0, -9)
 position = Vector2(64, 69)
 id = 2
 
-[node name="Sprite2D" parent="Roof" index="0"]
+[node name="CollisionShape2D" parent="Roof" index="0"]
+position = Vector2(0.5, -3.5)
+shape = SubResource("RectangleShape2D_t3eis")
+
+[node name="Sprite2D" parent="Roof" index="1"]
 position = Vector2(0, -21)
 frame = 4
 
-[node name="Highlight" parent="Roof" index="2"]
+[node name="Highlight" parent="Roof" index="3"]
 position = Vector2(0, -20)
 texture = ExtResource("10_yuo25")
-
-[node name="CollisionShape2D" parent="Roof" index="3"]
-position = Vector2(0.5, -3.5)
-shape = SubResource("RectangleShape2D_t3eis")
 
 [node name="Top" parent="Roof" index="4"]
 position = Vector2(0, -3)

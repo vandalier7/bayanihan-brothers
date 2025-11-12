@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 		return
 	for body: Liftable in bodies:
 		var depth
-		body.allowPlayerInteractionForThisFrame()
+		body.allowPlayerInteractionForThisFrame(true)
 		if true:
 			if updateTime == 0:
 				body.surfaceLevel = waterHanlder.getColumnSurfaceAtPosition(body.global_position)
@@ -150,6 +150,7 @@ func onBodyExited(body: Node2D) -> void:
 		body.get_parent().submerge(false)
 	else:
 		if is_instance_of(body, Liftable):
+			body.allowPlayerInteractionForThisFrame(false)
 			waterHanlder.objectFill(body.global_position, -body.volume)
 			body.linear_velocity.y *= 0.7
 			bodies.erase(body)

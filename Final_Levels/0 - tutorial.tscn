@@ -393,7 +393,11 @@ collision_mask = 8
 collision_layer = 0
 
 [node name="Stand" parent="." instance=ExtResource("4_4qxng")]
-position = Vector2(-31, 154)
+position = Vector2(28, 202)
+
+[node name="CollisionShape2D" parent="Stand" index="0"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_najhu")
 
 [node name="Sprite2D" parent="Stand" index="1"]
 position = Vector2(0, -21)
@@ -403,16 +407,16 @@ frame = 1
 position = Vector2(0, -20)
 texture = ExtResource("5_lyqpd")
 
-[node name="CollisionShape2D" parent="Stand" index="4"]
-position = Vector2(0, -5)
-shape = SubResource("RectangleShape2D_najhu")
-
-[node name="Top" parent="Stand" index="5"]
+[node name="Top" parent="Stand" index="4"]
 position = Vector2(0, -6)
 
 [node name="Room" parent="." instance=ExtResource("4_4qxng")]
 position = Vector2(57, 203)
 id = 1
+
+[node name="CollisionShape2D" parent="Room" index="0"]
+position = Vector2(0.5, -8)
+shape = SubResource("RectangleShape2D_fbwri")
 
 [node name="Sprite2D" parent="Room" index="1"]
 position = Vector2(0, -21)
@@ -422,16 +426,16 @@ frame = 2
 position = Vector2(0, -20)
 texture = ExtResource("6_egkfp")
 
-[node name="CollisionShape2D" parent="Room" index="4"]
-position = Vector2(0.5, -8)
-shape = SubResource("RectangleShape2D_fbwri")
-
-[node name="Top" parent="Room" index="5"]
+[node name="Top" parent="Room" index="4"]
 position = Vector2(0, -9)
 
 [node name="Roof" parent="." instance=ExtResource("4_4qxng")]
 position = Vector2(89, 204)
 id = 2
+
+[node name="CollisionShape2D" parent="Roof" index="0"]
+position = Vector2(0.5, -3.5)
+shape = SubResource("RectangleShape2D_t3eis")
 
 [node name="Sprite2D" parent="Roof" index="1"]
 position = Vector2(0, -21)
@@ -441,11 +445,7 @@ frame = 4
 position = Vector2(0, -20)
 texture = ExtResource("7_uhx1s")
 
-[node name="CollisionShape2D" parent="Roof" index="4"]
-position = Vector2(0.5, -3.5)
-shape = SubResource("RectangleShape2D_t3eis")
-
-[node name="Top" parent="Roof" index="5"]
+[node name="Top" parent="Roof" index="4"]
 position = Vector2(0, -3)
 
 [node name="Goal" parent="." instance=ExtResource("10_35uka")]

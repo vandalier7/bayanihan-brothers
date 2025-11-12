@@ -123,6 +123,7 @@ UseItem2={
 2d_physics/layer_13="FireSpread"
 2d_physics/layer_14="DepthSetter"
 2d_physics/layer_15="Interact"
+2d_physics/layer_16="Representative"
 
 [rendering]
 
