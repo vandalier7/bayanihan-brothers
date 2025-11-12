@@ -204,6 +204,8 @@ func throw(degrees):
 			body.collision_layer = body.originalLayer
 			body.collision_mask = body.originalMask
 			body.linear_velocity = Vector2(force.x * lastDir, force.y)
+			var coll: CollisionShape2D = body.get_child(0)
+			coll.one_way_collision = false
 			
 		if is_instance_of(body, CharacterBody2D):
 			throwSubstitute(body, force)
@@ -291,6 +293,8 @@ func letGo(currScene = null):
 			body.collision_layer = body.originalLayer
 			body.collision_mask = body.originalMask
 			body.linear_velocity = Vector2(lastDir * 100, -100)
+			var coll: CollisionShape2D = body.get_child(0)
+			coll.one_way_collision = false
 		if is_instance_of(body, CharacterBody2D):
 			body.carried = false
 			body.repped = true
@@ -346,6 +350,8 @@ func carry():
 				if id == 2:
 					body.collision_layer = 1
 					body.collision_mask = 1
+				var coll: CollisionShape2D = body.get_child(0)
+				coll.one_way_collision = true
 			else:
 				body.collision_layer = 64
 				body.collision_mask = 64

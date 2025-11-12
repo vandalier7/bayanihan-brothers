@@ -23,6 +23,7 @@ func _physics_process(delta: float) -> void:
 		return
 	for body: Liftable in bodies:
 		var depth
+		body.allowPlayerInteractionForThisFrame()
 		if true:
 			if updateTime == 0:
 				body.surfaceLevel = waterHanlder.getColumnSurfaceAtPosition(body.global_position)

@@ -118,6 +118,12 @@ func _ready() -> void:
 	originalAmount[0] = particles[0].amount
 	originalAmount[1] = particles[1].amount
 
+func allowPlayerInteractionForThisFrame():
+	collision_layer = originalLayer + 3
+	#collision_mask = originalLayer + 3
 
 func _process(delta: float) -> void:
 	burn(delta)
+	if collision_layer == originalLayer + 3:
+		collision_layer = originalLayer
+		collision_mask = originalMask
