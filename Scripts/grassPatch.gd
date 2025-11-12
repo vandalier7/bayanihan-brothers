@@ -25,6 +25,7 @@ func _ready() -> void:
 	flowerChance = group.flowerChance
 	
 	
+	
 	blades = get_children()
 	blades.shuffle()
 	# assign frame & z_index like before
@@ -34,6 +35,8 @@ func _ready() -> void:
 		if not is_instance_of(blade, Sprite2D): 
 			blades.erase(blade)
 			continue
+		if wind_direction < 0:
+			blade.flip_h = true
 		var roll = randf_range(0, 1)
 		if roll > flowerChance:
 			blade.frame = i
@@ -81,7 +84,7 @@ func _process(delta: float) -> void:
 
 # Call this function to push blades back temporarily
 func push_back() -> void:
-	print("grass")
+	#print("grass")
 	is_pushed_back = true
 	pushback_time = 0.0
 

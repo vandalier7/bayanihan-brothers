@@ -185,6 +185,7 @@ size = Vector2(56, 57)
 z_index = -2
 script = ExtResource("1_3bkxr")
 mercyJump = 0.15
+throwForce = 470.0
 breath = 15.0
 breathBar = NodePath("Breath")
 

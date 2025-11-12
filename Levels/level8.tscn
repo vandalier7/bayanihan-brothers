@@ -27,7 +27,7 @@
 [ext_resource type="Script" path="res://Levels/cellularWater.gd" id="26_ik6fb"]
 [ext_resource type="PackedScene" uid="uid://p5hnrt2wqqic" path="res://Objects/dynamicWater.tscn" id="27_ib8t6"]
 [ext_resource type="PackedScene" uid="uid://d1f4mtptoug7s" path="res://Objects/bucket.tscn" id="27_ss12l"]
-[ext_resource type="PackedScene" uid="uid://ctdgsadt30r47" path="res://deathCollider.tscn" id="27_wve6b"]
+[ext_resource type="PackedScene" uid="uid://ctdgsadt30r47" path="res://Objects/deathCollider.tscn" id="27_wve6b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_najhu"]
 size = Vector2(28, 8)

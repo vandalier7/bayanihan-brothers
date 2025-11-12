@@ -20,7 +20,7 @@ func resetDecay() -> void:
 func _draw() -> void:
 	var points = []
 	var gravity = 980
-	velocity = 400 * Vector2(cos(deg_to_rad(angle)), sin(deg_to_rad(angle)))
+	velocity = get_parent().get_parent().throwForce * Vector2(cos(deg_to_rad(angle)), sin(deg_to_rad(angle)))
 	for i in range(length):
 		if i < initialSkips:
 			continue

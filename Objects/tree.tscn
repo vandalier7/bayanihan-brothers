@@ -1,11 +1,35 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjbt51buau65n"]
+[gd_scene load_steps=4 format=3 uid="uid://cjbt51buau65n"]
 
 [ext_resource type="Script" path="res://Scripts/tree.gd" id="1_ai0u8"]
 [ext_resource type="Texture2D" uid="uid://dg24eoryafy5d" path="res://Textures/Decor/trees/tree01.png" id="1_coxc6"]
 
+[sub_resource type="Gradient" id="Gradient_bykxm"]
+colors = PackedColorArray(0.207843, 0.462745, 0.254902, 1, 0.243137, 0.537255, 0.282353, 1)
+
 [node name="Tree" type="Node2D"]
+z_index = -4
 script = ExtResource("1_ai0u8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_coxc6")
 hframes = 2
+vframes = 2
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 10
+lifetime = 6.0
+preprocess = 10.0
+emission_shape = 3
+emission_rect_extents = Vector2(20, 5)
+spread = 5.0
+gravity = Vector2(0, 20)
+initial_velocity_min = 15.0
+initial_velocity_max = 15.0
+angular_velocity_min = -50.35
+angular_velocity_max = 50.35
+orbit_velocity_min = -0.05
+orbit_velocity_max = 0.05
+damping_min = 16.713
+damping_max = 16.713
+scale_amount_max = 2.0
+color_ramp = SubResource("Gradient_bykxm")

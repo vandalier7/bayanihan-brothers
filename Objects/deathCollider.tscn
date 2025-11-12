@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ctdgsadt30r47"]
 
-[ext_resource type="Script" path="res://Levels/dynamicWater.gd" id="1_oofaq"]
+[ext_resource type="Script" path="res://Levels/dynamicWater.gd" id="1_yxkj0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j0hyy"]
 size = Vector2(377, 124)
@@ -10,7 +10,7 @@ z_index = 199
 position = Vector2(123, 206)
 collision_layer = 0
 collision_mask = 96
-script = ExtResource("1_oofaq")
+script = ExtResource("1_yxkj0")
 FLOAT_FORCE = 120
 flowSpeed = 50.0
 water_drag = 0.4

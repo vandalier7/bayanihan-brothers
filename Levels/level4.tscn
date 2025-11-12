@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://ctn4l3lwqvxum" path="res://Textures/Decor/Grasses and Bushes.png" id="18_w5y6j"]
 [ext_resource type="Texture2D" uid="uid://b1hvu5jwia6rn" path="res://Textures/Decor/Bushes Spritesheet.png" id="19_ui7fc"]
 [ext_resource type="Texture2D" uid="uid://bkoye6mb4om2i" path="res://Textures/Decor/Trees.png" id="20_340ff"]
-[ext_resource type="PackedScene" uid="uid://ctdgsadt30r47" path="res://deathCollider.tscn" id="22_g2ryn"]
+[ext_resource type="PackedScene" uid="uid://ctdgsadt30r47" path="res://Objects/deathCollider.tscn" id="22_g2ryn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_najhu"]
 size = Vector2(28, 8)

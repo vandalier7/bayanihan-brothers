@@ -29,7 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://c1tobu0uttcl4" path="res://Objects/grassPatch.tscn" id="27_vfilx"]
 [ext_resource type="Texture2D" uid="uid://oys5hd5xf2cp" path="res://Textures/Decor/Signs.png" id="28_g1rwg"]
 [ext_resource type="PackedScene" uid="uid://cjbt51buau65n" path="res://Objects/tree.tscn" id="29_03uyc"]
-[ext_resource type="Texture2D" uid="uid://dg24eoryafy5d" path="res://Textures/Decor/trees/tree01.png" id="30_k05gv"]
+[ext_resource type="PackedScene" uid="uid://xw0mvnqeupbi" path="res://Objects/grassGroup.tscn" id="29_4wevo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_najhu"]
 size = Vector2(28, 8)
@@ -667,9 +667,28 @@ position = Vector2(308, 176)
 [node name="Patch9" parent="Grass Group" instance=ExtResource("27_vfilx")]
 position = Vector2(245, 176)
 
+[node name="Grass Group2" parent="." instance=ExtResource("29_4wevo")]
+flowerChance = 0.0
+
+[node name="Patch" parent="Grass Group2" instance=ExtResource("27_vfilx")]
+position = Vector2(142, 208)
+
+[node name="Patch2" parent="Grass Group2" instance=ExtResource("27_vfilx")]
+position = Vector2(135, 208)
+
+[node name="Patch3" parent="Grass Group2" instance=ExtResource("27_vfilx")]
+position = Vector2(119, 208)
+
+[node name="Patch4" parent="Grass Group2" instance=ExtResource("27_vfilx")]
+position = Vector2(-13, 208)
+
+[node name="Patch5" parent="Grass Group2" instance=ExtResource("27_vfilx")]
+position = Vector2(0, 208)
+
 [node name="Tree" parent="." instance=ExtResource("29_03uyc")]
+z_index = -4
 position = Vector2(276, 144)
-sprite = ExtResource("30_k05gv")
+type = 1
 
 [editable path="player1"]
 [editable path="player2"]

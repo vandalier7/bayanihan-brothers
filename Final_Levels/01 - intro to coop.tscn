@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://dbc0qqdia51k6"]
+[gd_scene load_steps=40 format=4 uid="uid://dbc0qqdia51k6"]
 
 [ext_resource type="Script" path="res://Scripts/level.gd" id="1_ybyns"]
 [ext_resource type="PackedScene" uid="uid://sbes3fxx23wc" path="res://Objects/player.tscn" id="2_2lbwb"]
@@ -20,9 +20,11 @@
 [ext_resource type="Texture2D" uid="uid://cpcmoj6vyj387" path="res://Textures/riversheet.png" id="20_rxmbu"]
 [ext_resource type="PackedScene" uid="uid://bhpq5sx6brid5" path="res://Objects/audioPlayer.tscn" id="22_0exqv"]
 [ext_resource type="Texture2D" uid="uid://ctn4l3lwqvxum" path="res://Textures/Decor/Grasses and Bushes.png" id="23_m0l7c"]
-[ext_resource type="PackedScene" uid="uid://ctdgsadt30r47" path="res://deathCollider.tscn" id="24_2gl1a"]
+[ext_resource type="PackedScene" uid="uid://xw0mvnqeupbi" path="res://Objects/grassGroup.tscn" id="24_2e15w"]
+[ext_resource type="PackedScene" uid="uid://ctdgsadt30r47" path="res://Objects/deathCollider.tscn" id="24_2gl1a"]
 [ext_resource type="Texture2D" uid="uid://b1hvu5jwia6rn" path="res://Textures/Decor/Bushes Spritesheet.png" id="24_3ojg3"]
 [ext_resource type="Texture2D" uid="uid://bkoye6mb4om2i" path="res://Textures/Decor/Trees.png" id="25_e773q"]
+[ext_resource type="PackedScene" uid="uid://c1tobu0uttcl4" path="res://Objects/grassPatch.tscn" id="25_w4urf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_najhu"]
 size = Vector2(28, 8)
@@ -437,7 +439,7 @@ layer = -10
 follow_viewport_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Gameplay Text"]
-position = Vector2(24, 78)
+position = Vector2(9, 60)
 texture = ExtResource("13_ieyy5")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Gameplay Text"]
@@ -543,6 +545,79 @@ tile_set = SubResource("TileSet_3fk6n")
 
 [node name="DeathCollider" parent="." instance=ExtResource("24_2gl1a")]
 position = Vector2(81, 280)
+
+[node name="Grass Group" parent="." instance=ExtResource("24_2e15w")]
+wind_direction = -10.0
+flowerChance = 0.1
+
+[node name="Patch" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(336, 144)
+
+[node name="Patch2" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(328, 144)
+
+[node name="Patch3" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(319, 176)
+
+[node name="Patch4" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(314, 176)
+
+[node name="Patch5" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(299, 176)
+
+[node name="Patch6" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(195, 224)
+
+[node name="Patch7" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(177, 208)
+
+[node name="Patch8" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(184, 208)
+
+[node name="Patch9" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(109, 192)
+
+[node name="Patch17" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(-25, 112)
+
+[node name="Patch18" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(-31, 112)
+
+[node name="Patch19" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(36, 112)
+
+[node name="Patch20" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(45, 112)
+
+[node name="Patch21" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(56, 112)
+
+[node name="Patch22" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(427, 112)
+
+[node name="Patch23" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(421, 112)
+
+[node name="Patch10" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(102, 192)
+
+[node name="Patch11" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(94, 208)
+
+[node name="Patch12" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(64, 208)
+
+[node name="Patch13" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(74, 208)
+
+[node name="Patch14" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(84, 208)
+
+[node name="Patch15" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(168, 192)
+
+[node name="Patch16" parent="Grass Group" instance=ExtResource("25_w4urf")]
+position = Vector2(156, 192)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

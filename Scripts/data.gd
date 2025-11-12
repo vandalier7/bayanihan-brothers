@@ -25,6 +25,8 @@ var levels = {
 	0 : preload("res://Final_Levels/0 - tutorial.tscn"),
 	1 : preload("res://Final_Levels/01 - intro to coop.tscn"),
 	2 : preload("res://Final_Levels/02 - intro to throw.tscn"),
+	3 : preload("res://Final_Levels/03 - player throw 1.tscn"),
+	4 : preload("res://Final_Levels/04 - player throw 2.tscn"),
 	
 	
 	
@@ -38,8 +40,8 @@ var levels = {
 var titles = {
 	0 : "Building a Hut",
 	1 : "The Bayanihan Brothers",
-	2 : "Heave-Ho",
-	3 : "Mind the Gap",
+	2 : "Flower Garden",
+	3 : "Get Me Over There",
 	4 : "Airdrop",
 	5 : "Catch This!",
 	6 : "Grab Me!",

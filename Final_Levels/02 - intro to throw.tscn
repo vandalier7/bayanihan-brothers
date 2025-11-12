@@ -1,8 +1,10 @@
-[gd_scene load_steps=37 format=4 uid="uid://sc78bg4vc0bo"]
+[gd_scene load_steps=39 format=4 uid="uid://sc78bg4vc0bo"]
 
 [ext_resource type="Script" path="res://Scripts/level.gd" id="1_5hcrh"]
 [ext_resource type="PackedScene" uid="uid://sbes3fxx23wc" path="res://Objects/player.tscn" id="2_auxim"]
+[ext_resource type="PackedScene" uid="uid://xw0mvnqeupbi" path="res://Objects/grassGroup.tscn" id="2_hjhf0"]
 [ext_resource type="PackedScene" uid="uid://ci2qoj4anfjw5" path="res://Objects/blockMapLayer.tscn" id="2_xipq8"]
+[ext_resource type="PackedScene" uid="uid://c1tobu0uttcl4" path="res://Objects/grassPatch.tscn" id="3_pdn1x"]
 [ext_resource type="Texture2D" uid="uid://4ckeqdxma7m0" path="res://Textures/Player/Clothed Sprite Sheet 2.png" id="3_t1ito"]
 [ext_resource type="PackedScene" uid="uid://pl2x1nqikijo" path="res://Objects/liftable.tscn" id="4_b762e"]
 [ext_resource type="Texture2D" uid="uid://78rrkdlkxrag" path="res://Textures/Kubo/standHighlight.png" id="5_2c5w7"]
@@ -328,6 +330,74 @@ _data = {
 script = ExtResource("1_5hcrh")
 levelID = 2
 
+[node name="Grass Group" parent="." instance=ExtResource("2_hjhf0")]
+flowerChance = 0.6
+
+[node name="Patch" parent="Grass Group" instance=ExtResource("3_pdn1x")]
+position = Vector2(123, 128)
+
+[node name="Patch8" parent="Grass Group" instance=ExtResource("3_pdn1x")]
+position = Vector2(-63, 96)
+
+[node name="Patch9" parent="Grass Group" instance=ExtResource("3_pdn1x")]
+position = Vector2(-55, 96)
+
+[node name="Patch2" parent="Grass Group" instance=ExtResource("3_pdn1x")]
+position = Vector2(171, 128)
+
+[node name="Patch3" parent="Grass Group" instance=ExtResource("3_pdn1x")]
+position = Vector2(180, 128)
+
+[node name="Patch4" parent="Grass Group" instance=ExtResource("3_pdn1x")]
+position = Vector2(185, 128)
+
+[node name="Patch5" parent="Grass Group" instance=ExtResource("3_pdn1x")]
+position = Vector2(193, 144)
+
+[node name="Patch6" parent="Grass Group" instance=ExtResource("3_pdn1x")]
+position = Vector2(202, 144)
+
+[node name="Patch7" parent="Grass Group" instance=ExtResource("3_pdn1x")]
+position = Vector2(215, 144)
+
+[node name="Grass Group2" parent="." instance=ExtResource("2_hjhf0")]
+
+[node name="Patch" parent="Grass Group2" instance=ExtResource("3_pdn1x")]
+position = Vector2(135, 240)
+
+[node name="Patch8" parent="Grass Group2" instance=ExtResource("3_pdn1x")]
+position = Vector2(-46, 160)
+
+[node name="Patch9" parent="Grass Group2" instance=ExtResource("3_pdn1x")]
+position = Vector2(-36, 160)
+
+[node name="Patch10" parent="Grass Group2" instance=ExtResource("3_pdn1x")]
+position = Vector2(-20, 160)
+
+[node name="Patch11" parent="Grass Group2" instance=ExtResource("3_pdn1x")]
+position = Vector2(24, 160)
+
+[node name="Patch12" parent="Grass Group2" instance=ExtResource("3_pdn1x")]
+position = Vector2(5, 160)
+
+[node name="Patch2" parent="Grass Group2" instance=ExtResource("3_pdn1x")]
+position = Vector2(111, 240)
+
+[node name="Patch3" parent="Grass Group2" instance=ExtResource("3_pdn1x")]
+position = Vector2(100, 240)
+
+[node name="Patch4" parent="Grass Group2" instance=ExtResource("3_pdn1x")]
+position = Vector2(87, 240)
+
+[node name="Patch5" parent="Grass Group2" instance=ExtResource("3_pdn1x")]
+position = Vector2(72, 224)
+
+[node name="Patch6" parent="Grass Group2" instance=ExtResource("3_pdn1x")]
+position = Vector2(55, 224)
+
+[node name="Patch7" parent="Grass Group2" instance=ExtResource("3_pdn1x")]
+position = Vector2(34, 208)
+
 [node name="BG" parent="." instance=ExtResource("2_xipq8")]
 z_index = -100
 tile_map_data = PackedByteArray("AAAHAA0AAAABAAEAAAAIAA0AAAABAAEAAAAIAA4AAAABAAEAAAAHAA4AAAABAAEAAAAGAA4AAAABAAEAAAAGAA0AAAABAAEAAAAGAAwAAAABAAEAAAAHAAwAAAABAAEAAAAIAAwAAAABAAEAAAAJAA0AAAABAAEAAAAJAA4AAAABAAEAAAAJAAwAAAABAAEAAAAKAAwAAAABAAEAAAAKAA0AAAABAAEAAAAIAAsAAAADAAIAAAAJAAsAAAAFAAIAAAAKAAsAAAABAAEAAAAHAAsAAAABAAEAAAAJAA8AAAAEAAAAAAAIAA8AAAAEAAAAAAAHAA8AAAAEAAAAAAAGAAsAAAABAAEAAAAGAAoAAAABAAEAAAAHAAoAAAADAAIAAAAIAAoAAAACAAAAAAAGAA8AAAAEAAAAAAAKAA4AAAABAAEAAAAKAA8AAAABAAIAAAAJAAoAAAAAAAAAAAAKAAoAAAAEAAIAAAAFAA0AAAABAAEAAAAFAA4AAAABAAEAAAAFAA8AAAABAAEAAAAFABAAAAABAAIAAAAGAAkAAAABAAAAAAAHAAkAAAACAAAAAAAEAA0AAAAFAAIAAAAEAA4AAAABAAEAAAAEAA8AAAAFAAAAAAADAA8AAAAAAAIAAAADAA4AAAAFAAEAAAADAA0AAAAAAAAAAAAFAAoAAAAAAAEAAAAEAAwAAAAAAAAAAAAFAAsAAAAFAAEAAAAFAAwAAAAFAAIAAAALAAoAAAACAAAAAAALAAsAAAADAAEAAAALAAwAAAACAAEAAAALAA0AAAACAAEAAAALAA4AAAACAAIAAAA=")
@@ -362,8 +432,7 @@ collision_mask = 8
 collision_layer = 0
 
 [node name="Stand" parent="." instance=ExtResource("4_b762e")]
-visible = false
-position = Vector2(-116, 23)
+position = Vector2(168, 237)
 
 [node name="Sprite2D" parent="Stand" index="0"]
 position = Vector2(0, -21)
@@ -420,7 +489,6 @@ position = Vector2(0, -3)
 
 [node name="Goal" parent="." instance=ExtResource("10_hhcoj")]
 position = Vector2(153, 108)
-completion = 1
 
 [node name="Sprite2D" parent="Goal" index="1"]
 frame = 5
