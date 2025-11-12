@@ -27,6 +27,12 @@ var levels = {
 	2 : preload("res://Final_Levels/02 - intro to throw.tscn"),
 	3 : preload("res://Final_Levels/03 - player throw 1.tscn"),
 	4 : preload("res://Final_Levels/04 - player throw 2.tscn"),
+	5 : preload("res://Final_Levels/05 - intro to drop.tscn"),
+	6 : preload("res://Final_Levels/06 - intro to stacking.tscn"),
+	7 : preload("res://Final_Levels/07 - upper vent.tscn"),
+	8 : preload("res://Final_Levels/08 - chute.tscn"),
+	9 : preload("res://Final_Levels/09 - catch.tscn"),
+	
 	
 	
 	
@@ -43,11 +49,12 @@ var titles = {
 	2 : "Flower Garden",
 	3 : "Get Me Over There",
 	4 : "Mind the Gap",
-	5 : "Catch This!",
-	6 : "Grab Me!",
-	7 : "Trust Fall",
-	8 : "Raft",
-	9 : "Across the River",
+	5 : "Airdrop",
+	6 : "Stacking",
+	7 : "Tunnels and Crevices",
+	8 : "Chute",
+	9 : "Catch This!",
+	
 	10 : "Hauling Cargo",
 	11 : "Cave Adventures",
 	12 : "Air Pocket",

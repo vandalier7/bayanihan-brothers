@@ -9,10 +9,10 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lf2ym"]
 friction = 0.8
 rough = true
-bounce = 0.1
+bounce = 0.13
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_unneg"]
-size = Vector2(14, 13)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lp4vl"]
+size = Vector2(14, 15)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_loqi0"]
 size = Vector2(18, 18)
@@ -69,8 +69,9 @@ sprite = NodePath("Sprite2D")
 slot = NodePath("Slot")
 
 [node name="ActualCollider" type="CollisionShape2D" parent="."]
-position = Vector2(0, -7.5)
-shape = SubResource("RectangleShape2D_unneg")
+position = Vector2(0, -9.5)
+shape = SubResource("RectangleShape2D_lp4vl")
+debug_color = Color(0.95415, 2.88785e-07, 0.549913, 0.42)
 
 [node name="Checker" type="Area2D" parent="."]
 position = Vector2(0, -16)
