@@ -32,6 +32,10 @@ var levels = {
 	7 : preload("res://Final_Levels/07 - upper vent.tscn"),
 	8 : preload("res://Final_Levels/08 - chute.tscn"),
 	9 : preload("res://Final_Levels/09 - catch.tscn"),
+	10 : preload("res://Final_Levels/10 - catch vertical.tscn"),
+	11 : preload("res://Final_Levels/11 - ledge grab.tscn"),
+	#12 : preload("res://Final_Levels/12 - trust fall.tscn"),
+	
 	
 	
 	
@@ -54,10 +58,9 @@ var titles = {
 	7 : "Tunnels and Crevices",
 	8 : "Chute",
 	9 : "Catch This!",
-	
-	10 : "Hauling Cargo",
-	11 : "Cave Adventures",
-	12 : "Air Pocket",
+	10 : "Alley-oop",
+	11 : "Help Me Up",
+	12 : "Trust Fall",
 	13 : "Shallow Trouble",
 	14 : "Rescue Mission",
 	15 : "Hephaestus",

@@ -4,6 +4,7 @@ extends Node2D
 @onready var levelTitle: Label = get_node("UI/Welcome/Panel/Label")
 @onready var animator: AnimationPlayer = get_node("AnimationPlayer")
 @export var levelID: int = 0
+@export var zoomedPreview := true
 
 var titleDisplay: Label
 
@@ -43,7 +44,8 @@ func _ready() -> void:
 		
 		Bgm.playBgm()
 		
-		cam.zoom = Vector2(2, 2)
+		if zoomedPreview:
+			cam.zoom = Vector2(2, 2)
 		var originalCamState = [cam.staticPosition, cam.global_position]
 		cam.staticPosition = true
 		animator.play("start")
