@@ -49,7 +49,7 @@ var lineAssist: Node2D
 var pickup: Node2D
 var build: Node2D
 @onready var interact = $Interact
-var torchCatch: Node2D
+var torchCatch: Area2D
 var highlight: Sprite2D
 var splash: CPUParticles2D
 
@@ -101,6 +101,12 @@ func _ready() -> void:
 	drop = get_node("Drop")
 	pickup = get_node("PickUp")
 	torchCatch = get_node("TorchCatcher")
+	var bit
+	#if (id == 1):
+		#bit = 4
+	#else:
+		#bit = 8
+	#torchCatch.collision_mask -= bit
 	aimAssist = get_node("AimAssist")
 	lineAssist = get_node("AimAssist/LineAssist")
 	build = get_node("Build")
@@ -199,7 +205,9 @@ func throw(degrees):
 		if is_instance_of(body, RigidBody2D):
 			if is_instance_of(body, Torch):
 				body.setThrown()
+			
 			get_tree().current_scene.add_child(body)
+			body.setLastHandler(id)
 			body.freeze = false
 			body.collision_layer = body.originalLayer
 			body.collision_mask = body.originalMask
@@ -706,8 +714,11 @@ func _physics_process(delta: float) -> void:
 var selectionQueue: Array
 
 func onPickUpEntered(body: Node2D) -> void:
-	if is_instance_of(body, Liftable) and not body.liftable:
+	if body == self:
 		return
+	if is_instance_of(body, Liftable) and not body.liftable and body.lastHandler != id:
+		return
+	
 	if selected:
 		selectionQueue.append(body)
 		return
@@ -724,7 +735,8 @@ func onPickUpExited(body: Node2D) -> void:
 	if is_instance_of(selected, Player1):
 		selected.highlight.visible = false
 	
-	selectionQueue.erase(body)
+	while selectionQueue.has(body):
+		selectionQueue.erase(body)
 	if len(selectionQueue) > 0:
 		selected = selectionQueue[0]
 		
@@ -777,6 +789,33 @@ func torchEntered(body: Node2D) -> void:
 			selected.highlight.visible = false
 	
 		selected = body
+		return
+	
+	# onPickUpEntered logic with velocity check for other bodies
+	if is_instance_of(body, Liftable) and not body.liftable and body.lastHandler != id:
+		return
+	
+	# Check if body is moving fast enough to be intercepted (high x-velocity)
+	if is_instance_of(body, Liftable):
+		var b: Liftable = body
+		if abs(b.linear_velocity.length()) < 100:  # Adjust threshold as needed
+			return
+	
+		
+	
+	if is_instance_of(body, Player1) and body != self:
+		var b: CharacterBody2D = body
+		if abs(b.velocity.length()) < 100:  # Adjust threshold as needed
+			return
+			
+		if selected and not selectionQueue.has(body):
+			selectionQueue.append(body)
+			return
+		
+		selected = body
+		statuses["SELECTED"] = true
+		if not carried:
+			get_parent().broadcastState(statuses)
 
 var activeInteractible
 

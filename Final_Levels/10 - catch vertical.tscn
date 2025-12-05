@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://b0gdn1hc6defh"]
+[gd_scene load_steps=39 format=4 uid="uid://b0gdn1hc6defh"]
 
 [ext_resource type="Script" path="res://Scripts/level.gd" id="1_4aq4j"]
 [ext_resource type="PackedScene" uid="uid://cjbt51buau65n" path="res://Objects/tree.tscn" id="2_ykx1g"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://co1l12uwcutm2" path="res://Objects/goal.tscn" id="12_aysgv"]
 [ext_resource type="Script" path="res://Scripts/camera.gd" id="13_6q06q"]
 [ext_resource type="PackedScene" uid="uid://cekw1rbfi24j2" path="res://Objects/cameraBoundaries.tscn" id="14_7o2nu"]
-[ext_resource type="Texture2D" uid="uid://qb8hfjojwg3x" path="res://Textures/Tutorials/drop.png" id="15_k862m"]
 [ext_resource type="Texture2D" uid="uid://myvw7108paer" path="res://Textures/Tutorials/actions.png" id="16_26eki"]
 [ext_resource type="Theme" uid="uid://dmm7qxbft8xa2" path="res://gameTheme.tres" id="17_paiky"]
 [ext_resource type="PackedScene" uid="uid://dujfn57iseb1u" path="res://Objects/parallaxBG.tscn" id="18_3j5jc"]
@@ -559,10 +558,6 @@ scale = Vector2(0.0546875, 0.304688)
 [node name="Gameplay Text" type="CanvasLayer" parent="."]
 layer = -10
 follow_viewport_enabled = true
-
-[node name="Sprite2D" type="Sprite2D" parent="Gameplay Text"]
-position = Vector2(68, 24)
-texture = ExtResource("15_k862m")
 
 [node name="UI" type="CanvasLayer" parent="."]
 

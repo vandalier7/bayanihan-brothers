@@ -34,7 +34,7 @@ var levels = {
 	9 : preload("res://Final_Levels/09 - catch.tscn"),
 	10 : preload("res://Final_Levels/10 - catch vertical.tscn"),
 	11 : preload("res://Final_Levels/11 - ledge grab.tscn"),
-	#12 : preload("res://Final_Levels/12 - trust fall.tscn"),
+	12 : preload("res://Final_Levels/12 - trust fall.tscn"),
 	
 	
 	

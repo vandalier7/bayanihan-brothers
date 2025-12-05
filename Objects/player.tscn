@@ -179,7 +179,7 @@ _data = [Vector2(0, -0.992453), 0.0, 0.0, 0, 0, Vector2(1, -0.328302), 0.0, 0.0,
 point_count = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ftbcg"]
-size = Vector2(56, 57)
+size = Vector2(56, 52)
 
 [node name="player" type="CharacterBody2D" node_paths=PackedStringArray("breathBar")]
 z_index = -2
@@ -378,16 +378,16 @@ hue_variation_curve = SubResource("Curve_lnqd8")
 
 [node name="TorchCatcher" type="Area2D" parent="."]
 collision_layer = 0
-collision_mask = 3072
+collision_mask = 3084
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TorchCatcher"]
-position = Vector2(20, -15.5)
+position = Vector2(20, -18)
 shape = SubResource("RectangleShape2D_ftbcg")
 
 [connection signal="body_entered" from="PickUp" to="." method="onPickUpEntered"]
-[connection signal="body_exited" from="PickUp" to="." method="onPickUpExited"]
 [connection signal="area_entered" from="Build" to="." method="onBuildEntered"]
 [connection signal="area_exited" from="Build" to="." method="onBuildExited"]
 [connection signal="area_entered" from="Interact" to="." method="onInteractEntered"]
 [connection signal="area_exited" from="Interact" to="." method="onInteractExited"]
 [connection signal="body_entered" from="TorchCatcher" to="." method="torchEntered"]
+[connection signal="body_exited" from="TorchCatcher" to="." method="onPickUpExited"]

@@ -37,7 +37,14 @@ var surfaceLevel: float = 0
 
 var playersOnMe: int = 0
 
+var lastHandler: int = -1
+
 var collider: CollisionShape2D
+
+func setLastHandler(id: int):
+	lastHandler = id
+	await get_tree().create_timer(1).timeout
+	lastHandler = -1
 
 func depthOverride(boolean: bool, value: float = 0):
 	customDepth = boolean

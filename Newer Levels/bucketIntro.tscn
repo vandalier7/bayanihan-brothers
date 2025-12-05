@@ -407,7 +407,7 @@ texture = ExtResource("6_3oq6a")
 position = Vector2(0, -9)
 
 [node name="Roof" parent="." instance=ExtResource("4_yxbm2")]
-position = Vector2(240, 230)
+position = Vector2(298, 280)
 id = 2
 interval = 0.5
 

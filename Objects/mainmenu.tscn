@@ -480,6 +480,7 @@ script = ExtResource("3_2d87o")
 level = 13
 
 [node name="Level Button14" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+visible = false
 custom_minimum_size = Vector2(50, 54)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -492,6 +493,7 @@ script = ExtResource("3_2d87o")
 level = 14
 
 [node name="Level Button15" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+visible = false
 custom_minimum_size = Vector2(50, 54)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -504,6 +506,7 @@ script = ExtResource("3_2d87o")
 level = 15
 
 [node name="Level Button16" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+visible = false
 custom_minimum_size = Vector2(50, 54)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -516,6 +519,7 @@ script = ExtResource("3_2d87o")
 level = 16
 
 [node name="Level Button17" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+visible = false
 custom_minimum_size = Vector2(50, 54)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -528,6 +532,7 @@ script = ExtResource("3_2d87o")
 level = 17
 
 [node name="Level Button18" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+visible = false
 custom_minimum_size = Vector2(50, 54)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -540,6 +545,7 @@ script = ExtResource("3_2d87o")
 level = 18
 
 [node name="Level Button19" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+visible = false
 custom_minimum_size = Vector2(50, 54)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -552,6 +558,7 @@ script = ExtResource("3_2d87o")
 level = 19
 
 [node name="Level Button20" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+visible = false
 custom_minimum_size = Vector2(50, 54)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -564,6 +571,7 @@ script = ExtResource("3_2d87o")
 level = 20
 
 [node name="Level Button21" type="Button" parent="Level Menu/ScrollContainer/GridContainer"]
+visible = false
 custom_minimum_size = Vector2(50, 54)
 layout_mode = 2
 size_flags_horizontal = 3
